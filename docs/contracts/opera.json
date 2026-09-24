@@ -1,0 +1,69 @@
+{
+  "scope": "OPERA CE/CT/GT comparison on the harmonised BioCAS formulation",
+  "dataset": {
+    "manifest": "manifests/biocas_records.csv.gz",
+    "included_records": 3323,
+    "splits": {
+      "train2022": 1771,
+      "test2022": 724,
+      "test2023": 828
+    },
+    "excluded_records": 231,
+    "tasks": {
+      "binary": ["Normal", "Adventitious"],
+      "coarse": ["Normal", "CAS only", "DAS only", "CAS and DAS"]
+    }
+  },
+  "source": {
+    "repository": "https://github.com/evelyn0414/OPERA.git",
+    "revision": "3622310e667afb8aa40169050b4dd45de75946a2",
+    "model_util_sha256": "bc637deacfde3154d2290eb063fb6b3a6c5dd33fc0c26e79a39a08dd0e5f185c",
+    "util_sha256": "96bd9692d85fe82a033dcc86e8d97fa4971ba9d04ea2437888f88d01e0e81af5"
+  },
+  "models": {
+    "operaCE": {
+      "display_name": "OPERA-CE",
+      "checkpoint": "encoder-operaCE.ckpt",
+      "checkpoint_sha256": "2e18765ad90e584f7122dd739cd9e9b56d9013ce25660042ab8f6690cce74d39",
+      "dimension": 1280,
+      "readout": "extract_feature(dim=1280) on the entire record spectrogram"
+    },
+    "operaCT": {
+      "display_name": "OPERA-CT",
+      "checkpoint": "encoder-operaCT.ckpt",
+      "checkpoint_sha256": "83c35b435518ad5f395bf4d34e552caa088faf9e63f6b8058d5288e9abb350ae",
+      "dimension": 768,
+      "readout": "extract_feature(dim=768) on the entire record spectrogram"
+    },
+    "operaGT": {
+      "display_name": "OPERA-GT",
+      "checkpoint": "encoder-operaGT.ckpt",
+      "checkpoint_sha256": "64dff121368e30ee7b1c9b2e526eaf2af93ac63ce4a8712efd60ecda84618cb8",
+      "dimension": 384,
+      "readout": "arithmetic mean of forward_feature over 8 s, 50%-overlap spectrogram splits"
+    }
+  },
+  "preprocessing": {
+    "decoder": "librosa.load mono",
+    "sample_rate_hz": 16000,
+    "silence_trim": {"frame_length": 1600, "hop_length": 800},
+    "spectrogram": {"n_mels": 64, "n_fft": 1024, "hop_length": 512, "fmin_hz": 50, "fmax_hz": 8000},
+    "scaling": "power_to_db followed by per-spectrogram min-max normalisation",
+    "native_input_seconds": 8,
+    "short_input_padding": "deterministic repeat padding with upstream seed 7456"
+  },
+  "downstream": {
+    "training_split": "train2022",
+    "evaluations": ["test2022", "test2023"],
+    "pipeline": ["StandardScaler", "LogisticRegression"],
+    "C": 1.0,
+    "penalty": "l2",
+    "solver": "lbfgs",
+    "max_iter": 5000,
+    "class_weight": null,
+    "model_selection": false,
+    "test_data_used_for_selection": false
+  },
+  "metrics": ["balanced_accuracy", "macro_f1", "accuracy"],
+  "thesis_tables": ["tab:hear_opera_comparison"]
+}

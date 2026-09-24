@@ -1,0 +1,11 @@
+{
+  "protocol": "biocas_harmonized_protocol_v2",
+  "encoder": {"name": "google/hear-pytorch", "revision": "f791cd42437c3e268c8ac84707e3508900f65f1a", "frozen": true},
+  "audio": {"sample_rate_hz": 16000, "window_seconds": 2.0, "window_samples": 32000},
+  "single_window": {"selection": "maximum_squared_waveform_energy", "tie": "earliest", "short_record": "right_zero_pad"},
+  "complete_record": {"stride_samples": 32000, "final_partial": "right_zero_pad", "exact_multiple_extra_window": false, "pooling": "arithmetic_mean"},
+  "temporal_grid": {"patch_tokens": 96, "grid": [12, 8, 1024], "statistics": ["mean", "population_std_ddof_0"], "dimensions": 24576, "record_pooling": "arithmetic_mean"},
+  "downstream": {"scaler": "StandardScaler", "classifier": "LogisticRegression", "penalty": "l2", "solver": "lbfgs", "C": 1.0, "max_iter": 5000, "class_weight": null},
+  "fusion": {"formula": "alpha*p_CLS + (1-alpha)*p_TG", "alpha": {"binary": 0.75, "multiclass": 0.65}},
+  "selection": {"folds": 5, "groups": "patient_group", "alpha_grid_start": 0.0, "alpha_grid_stop": 1.0, "alpha_grid_step": 0.05, "training_only": true}
+}

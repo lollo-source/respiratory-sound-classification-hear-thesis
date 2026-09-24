@@ -1,0 +1,23 @@
+{
+  "label": "tab:single_window_event_capture",
+  "rows": [
+    {
+      "capture_rate_percent": 77.32497387669801,
+      "captured_records": 740,
+      "dataset": "HF_Lung_V1",
+      "pathological_records": 957
+    },
+    {
+      "capture_rate_percent": 41.735537190082646,
+      "captured_records": 101,
+      "dataset": "SPRSound2022",
+      "pathological_records": 242
+    },
+    {
+      "capture_rate_percent": 50.51903114186851,
+      "captured_records": 146,
+      "dataset": "SPRSound2023",
+      "pathological_records": 289
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "label": "tab:hflung_class_distribution",
+  "rows": [
+    {
+      "class": "Normal",
+      "count": 2810,
+      "split": "train",
+      "task": "binary"
+    },
+    {
+      "class": "Adventitious",
+      "count": 4999,
+      "split": "train",
+      "task": "binary"
+    },
+    {
+      "class": "Normal",
+      "count": 999,
+      "split": "test",
+      "task": "binary"
+    },
+    {
+      "class": "Adventitious",
+      "count": 957,
+      "split": "test",
+      "task": "binary"
+    },
+    {
+      "class": "Normal",
+      "count": 2810,
+      "split": "train",
+      "task": "coarse"
+    },
+    {
+      "class": "CAS only",
+      "count": 1923,
+      "split": "train",
+      "task": "coarse"
+    },
+    {
+      "class": "DAS only",
+      "count": 1961,
+      "split": "train",
+      "task": "coarse"
+    },
+    {
+      "class": "CAS and DAS",
+      "count": 1115,
+      "split": "train",
+      "task": "coarse"
+    },
+    {
+      "class": "Normal",
+      "count": 999,
+      "split": "test",
+      "task": "coarse"
+    },
+    {
+      "class": "CAS only",
+      "count": 589,
+      "split": "test",
+      "task": "coarse"
+    },
+    {
+      "class": "DAS only",
+      "count": 296,
+      "split": "test",
+      "task": "coarse"
+    },
+    {
+      "class": "CAS and DAS",
+      "count": 72,
+      "split": "test",
+      "task": "coarse"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "dataset": "BioCAS2022",
+  "unit": "patient_group",
+  "replicates": 10000,
+  "sampling": "patients_with_replacement_all_records_with_multiplicity",
+  "paired": true,
+  "confidence_level": 0.95,
+  "interval": "percentile",
+  "quantile_interpolation": "numpy_linear",
+  "model_retraining": false,
+  "draws": "artifacts/predictions/bootstrap_draw_indices.npz"
+}

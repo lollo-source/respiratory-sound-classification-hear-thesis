@@ -1,0 +1,101 @@
+{
+  "contract_id": "hear-window-shared-forward-v1-f791cd-b32",
+  "historical_source_paths_are_provenance_only": true,
+  "decision": {
+    "phase_specific_caches_required": false,
+    "rationale": "For each dataset, audited Phase 3 used the identical deterministic Phase-2 global window order, batch size, mixed-record batch membership, preprocessing, model revision and pooled CLS readout. Historical Phase-3 manifests report exact equality of same-forward CLS to the Phase-2 window cache. One shared per-dataset window bundle is therefore faithful; Phase-2 uses CLS and Phase-3 uses CLS plus Temporal Grid. HF Lung and BioCAS remain separate bundles because their record/window protocols differ."
+  },
+  "common_model": {
+    "repository": "google/hear-pytorch",
+    "revision": "f791cd42437c3e268c8ac84707e3508900f65f1a",
+    "pytorch_model_bin_sha256": "d44d355816ee4315f67d7810da274409e9b1a6570325fc5ba9ae27555fd81723",
+    "config_sha256": "9774a77892e39ca8798aacfe68287a7cbd280993175ea93ca8424ffc75130e60",
+    "preprocessing": "external/hear/python/data_processing/audio_utils.py::preprocess_audio",
+    "preprocessing_sha256": "1f2dcc0406e86d1162c97c91782e8488f290b9f41006d7f5fd5035bbf4c88957",
+    "preprocessing_scope": "one call on each raw float32 waveform batch; min/max normalization is global over the complete batch tensor",
+    "mode": "model.eval plus torch.inference_mode",
+    "input_dtype": "float32",
+    "output_dtype": "float32",
+    "cls_source": "model output pooler_output",
+    "temporal_grid_source": "last_hidden_state[:,1:,:] from the same forward as CLS",
+    "temporal_grid_definition": "[B,96,1024] -> [B,12,8,1024]; mean and population std (ddof=0) over the 8 mel positions; concatenate 12x1024 mean then 12x1024 std -> [B,24576]",
+    "temporal_grid_source_sha256_current": "eec64bd08f3c000bae42efb5a4ef487fb6c237da21e701dee1fbbf78d5e52a02",
+    "determinism": "no shuffle; fixed batch membership; no explicit deterministic-algorithms override in the audited producers"
+  },
+  "producers": {
+    "hf_lung_phase2": {
+      "source": "src/evaluation/run_hf_lung_v1_phase2_cls_sprsound_historical_preprocessing.py",
+      "canonical_source_sha256": "3c1a890d952b84fa1e2e35ea2f89818ce1154fe702ca8b5e6a8f841a3b4f3c7f",
+      "protocol": "data/processed/hf_lung_v1/protocol_v1",
+      "protocol_version": "hf_lung_v1_protocol_v1",
+      "protocol_records_sha256": "b9baa6ba2d64534da3d4f97ca96511e96d7cabcae782a3fc1896263c48ed6260",
+      "record_order_sha256": "08dafc4b789c90d656d59f714dcc5e26b83f6b512e6f97a4dba9a68f7cb7a88d",
+      "record_order": "locked records.csv.gz row order",
+      "window_order": "window_index 0..7 per record",
+      "flattening": "global record-major window stream",
+      "batch_size": 32,
+      "batches_mix_records": true,
+      "batch_count": 2442,
+      "final_batch_size": 8,
+      "audio_loading": "Python wave PCM decoder to float32; multichannel arithmetic mean",
+      "resampling": "scipy.signal.resample_poly to 16000 Hz",
+      "segmentation": "eight fixed non-overlapping 2 s windows at [0,2),...,[14,16) seconds",
+      "padding": "right-zero-pad every short window, including the 14-16 s window of each 15 s record",
+      "model_revision_evidence": "functionally pinned by Phase-3 exact same-forward CLS equality",
+      "device_evidence": "canonical replay command used cuda:0",
+      "readouts": ["pooler CLS 512-D"]
+    },
+    "hf_lung_phase3": {
+      "source": "src/evaluation/run_hf_lung_v1_phase3_dual_readout_late_fusion.py",
+      "canonical_source_sha256": "455ccc0324c6c07bca7fcb6e0b6877f60fa0814f9790c13a2453541aaf2a91b7",
+      "current_source_sha256": "438d4fd988584429bf59d44e67bce7cc06ee367dc120d59b3f0127d99d5d3031",
+      "protocol_and_batching": "identical to hf_lung_phase2",
+      "model_revision": "f791cd42437c3e268c8ac84707e3508900f65f1a",
+      "same_forward": true,
+      "historical_cls_vs_phase2_max_abs_diff": 0.0,
+      "readouts": ["pooler CLS 512-D", "Temporal Grid 24576-D"]
+    },
+    "biocas_harmonised_phase2": {
+      "source": "src/evaluation/run_biocas_harmonized_phase2_full_record_cls_mean.py",
+      "canonical_source_sha256": "effb5574e31346b0fdf6e46baaecf4934ce39e7d32d533eab5bfb2035a7f9ce2",
+      "protocol": "data/processed/biocas_harmonized/protocol_v2",
+      "protocol_version": "biocas_harmonized_protocol_v2",
+      "protocol_records_sha256": "82ba08591079885b2a8d34c8a1ba1709d30233d76e5c68182f4fe7212ea71faa",
+      "protocol_manifest_sha256": "958f8b139d0ccc9622be63bb3ae5c5f4d29414321b729148d6ddd89f82b6e979",
+      "folds_sha256": "74858e3d72d311bdf4273842f5d892947af29fa24ae1477ab734c25ef1f321b0",
+      "record_order_sha256": "2ca2776ecea09631250fe60dc72a6ed82ae68d40b3591cc2551ec9b3abc379c4",
+      "window_order_sha256": "27a8ddd309a1c4b84909fae3480c328a1a828c930749316772f6ceda2bdc35ed",
+      "record_order": "included records in locked records.csv.gz row order",
+      "window_order": "within-record window index ascending",
+      "flattening": "global record-major variable-window stream",
+      "batch_size": 32,
+      "batches_mix_records": true,
+      "batch_count": 622,
+      "final_batch_size": 23,
+      "audio_loading": "Python wave PCM decoder to float32; multichannel arithmetic mean",
+      "resampling": "scipy.signal.resample_poly to 16000 Hz",
+      "segmentation": "max(1,ceil(duration/2 s)) fixed-grid non-overlapping windows",
+      "padding": "right-zero-pad only the final incomplete window; exact multiples add no window",
+      "model_revision": "f791cd42437c3e268c8ac84707e3508900f65f1a",
+      "device_evidence": "canonical manifest records CUDA extraction; replay command selected an explicit CUDA device",
+      "readouts": ["pooler CLS 512-D"]
+    },
+    "biocas_harmonised_phase3": {
+      "source": "src/evaluation/run_biocas_harmonized_phase3_dual_readout_late_fusion.py",
+      "canonical_source_sha256": "c92a28e2a3508c40171bda4621af6e664b72af2ff2763586773e9a2eb94a0b68",
+      "current_source_sha256": "f7800c47a7f481a453b06d10f3ffc1a269f4988f00a95759f72a146e9d109f84",
+      "protocol_and_batching": "identical to biocas_harmonised_phase2",
+      "model_revision": "f791cd42437c3e268c8ac84707e3508900f65f1a",
+      "same_forward": true,
+      "historical_cls_vs_phase2_max_abs_diff": 0.0,
+      "readouts": ["pooler CLS 512-D", "Temporal Grid 24576-D"]
+    }
+  },
+  "storage": {
+    "feature_array_format": "NumPy .npy, C-order float32",
+    "metadata": "deterministic gzip CSV containing release-local record/group pseudonyms only",
+    "public_distribution": "not distributed",
+    "runtime_role": "regenerable intermediate cache for Full Reproduction",
+    "dependency_policy": "the public workflow must regenerate these features and must not depend on the validated internal cache"
+  }
+}

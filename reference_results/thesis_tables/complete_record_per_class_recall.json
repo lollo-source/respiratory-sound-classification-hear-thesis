@@ -1,0 +1,149 @@
+{
+  "label": "tab:complete_record_per_class_recall",
+  "rows": [
+    {
+      "class": "Normal",
+      "dataset": "BioCAS2022",
+      "delta_recall": 0.049792531120331884,
+      "evaluation": "test2022",
+      "recall": 0.7946058091286307,
+      "task": "binary"
+    },
+    {
+      "class": "Adventitious",
+      "dataset": "BioCAS2022",
+      "delta_recall": 0.1322314049586777,
+      "evaluation": "test2022",
+      "recall": 0.6487603305785123,
+      "task": "binary"
+    },
+    {
+      "class": "Normal",
+      "dataset": "BioCAS2022",
+      "delta_recall": 0.08091286307053935,
+      "evaluation": "test2022",
+      "recall": 0.8257261410788381,
+      "task": "coarse"
+    },
+    {
+      "class": "CAS only",
+      "dataset": "BioCAS2022",
+      "delta_recall": 0.1588785046728972,
+      "evaluation": "test2022",
+      "recall": 0.35514018691588783,
+      "task": "coarse"
+    },
+    {
+      "class": "DAS only",
+      "dataset": "BioCAS2022",
+      "delta_recall": 0.2222222222222222,
+      "evaluation": "test2022",
+      "recall": 0.3434343434343434,
+      "task": "coarse"
+    },
+    {
+      "class": "CAS and DAS",
+      "dataset": "BioCAS2022",
+      "delta_recall": 0.19444444444444448,
+      "evaluation": "test2022",
+      "recall": 0.4166666666666667,
+      "task": "coarse"
+    },
+    {
+      "class": "Normal",
+      "dataset": "BioCAS2023",
+      "delta_recall": 0.027829313543599188,
+      "evaluation": "test2023",
+      "recall": 0.9090909090909091,
+      "task": "binary"
+    },
+    {
+      "class": "Adventitious",
+      "dataset": "BioCAS2023",
+      "delta_recall": 0.22491349480968864,
+      "evaluation": "test2023",
+      "recall": 0.6193771626297578,
+      "task": "binary"
+    },
+    {
+      "class": "Normal",
+      "dataset": "BioCAS2023",
+      "delta_recall": 0.01855287569573283,
+      "evaluation": "test2023",
+      "recall": 0.8794063079777366,
+      "task": "coarse"
+    },
+    {
+      "class": "CAS only",
+      "dataset": "BioCAS2023",
+      "delta_recall": 0.08148148148148146,
+      "evaluation": "test2023",
+      "recall": 0.2518518518518518,
+      "task": "coarse"
+    },
+    {
+      "class": "DAS only",
+      "dataset": "BioCAS2023",
+      "delta_recall": 0.2857142857142857,
+      "evaluation": "test2023",
+      "recall": 0.39849624060150374,
+      "task": "coarse"
+    },
+    {
+      "class": "CAS and DAS",
+      "dataset": "BioCAS2023",
+      "delta_recall": -0.047619047619047616,
+      "evaluation": "test2023",
+      "recall": 0.38095238095238093,
+      "task": "coarse"
+    },
+    {
+      "class": "Normal",
+      "dataset": "HF_Lung",
+      "delta_recall": 0.056056056056056014,
+      "evaluation": "official_test",
+      "recall": 0.6306306306306306,
+      "task": "binary"
+    },
+    {
+      "class": "Adventitious",
+      "dataset": "HF_Lung",
+      "delta_recall": -0.01985370950888199,
+      "evaluation": "official_test",
+      "recall": 0.6562173458725182,
+      "task": "binary"
+    },
+    {
+      "class": "Normal",
+      "dataset": "HF_Lung",
+      "delta_recall": 0.034034034034034044,
+      "evaluation": "official_test",
+      "recall": 0.7187187187187187,
+      "task": "coarse"
+    },
+    {
+      "class": "CAS only",
+      "dataset": "HF_Lung",
+      "delta_recall": 0.04584040747028861,
+      "evaluation": "official_test",
+      "recall": 0.23089983022071306,
+      "task": "coarse"
+    },
+    {
+      "class": "DAS only",
+      "dataset": "HF_Lung",
+      "delta_recall": 0.1824324324324324,
+      "evaluation": "official_test",
+      "recall": 0.5304054054054054,
+      "task": "coarse"
+    },
+    {
+      "class": "CAS and DAS",
+      "dataset": "HF_Lung",
+      "delta_recall": -0.09722222222222224,
+      "evaluation": "official_test",
+      "recall": 0.05555555555555555,
+      "task": "coarse"
+    }
+  ]
+}

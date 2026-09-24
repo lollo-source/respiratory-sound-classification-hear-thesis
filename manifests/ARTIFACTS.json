@@ -1,0 +1,190 @@
+{
+  "artifacts": {
+    "artifacts/predictions/bootstrap_draw_indices.npz": {
+      "class_order": [],
+      "dataset": "BioCAS2022",
+      "packaged_sha256": "732b33ef16c05a1ae052c3b0562fa159e195e4b73678e1efe0c853eca29e55ac",
+      "source_canonical_paths": [
+        "release_staging/biocas_challenge_t2/shared_forward_fixed_alpha_candidate_v1_20260919/bootstrap/bootstrap_draws_exact_thesis_copy.npz"
+      ],
+      "source_sha256": {
+        "release_staging/biocas_challenge_t2/shared_forward_fixed_alpha_candidate_v1_20260919/bootstrap/bootstrap_draws_exact_thesis_copy.npz": "2c3b5ac26cfd24cba1af42cd1ec15a03a596f015978e1343b24eb453ce5d7f86"
+      },
+      "task": "patient cluster bootstrap draws"
+    },
+    "artifacts/predictions/challenge.csv.gz": {
+      "class_order": {
+        "T2-1": [
+          "Normal",
+          "Adventitious",
+          "Poor Quality"
+        ],
+        "T2-2": [
+          "Normal",
+          "CAS",
+          "DAS",
+          "CAS & DAS",
+          "Poor Quality"
+        ]
+      },
+      "dataset": "BioCAS2022/2023",
+      "packaged_sha256": "1ad8cd07cce5c810f2c9e77366c72e47449445dc4b2d6c952fc4308deb69f818",
+      "source_canonical_paths": [
+        "release_staging/biocas_challenge_t2/shared_forward_fixed_alpha_candidate_v1_20260919/reconstruction/replay_1/controlled_frozen_t_alpha/predictions.csv",
+        "release_staging/biocas_challenge_t2/shared_forward_fixed_alpha_candidate_v1_20260919/bootstrap/bootstrap_draws_exact_thesis_copy.npz"
+      ],
+      "source_sha256": {
+        "release_staging/biocas_challenge_t2/shared_forward_fixed_alpha_candidate_v1_20260919/bootstrap/bootstrap_draws_exact_thesis_copy.npz": "2c3b5ac26cfd24cba1af42cd1ec15a03a596f015978e1343b24eb453ce5d7f86",
+        "release_staging/biocas_challenge_t2/shared_forward_fixed_alpha_candidate_v1_20260919/reconstruction/replay_1/controlled_frozen_t_alpha/predictions.csv": "f3849a637cbf9e5bc5e632c879365ebe47587254d68d8de58bc3b8357e0835f2"
+      },
+      "task": "T2-1/T2-2 Challenge"
+    },
+    "artifacts/predictions/event_capture.csv.gz": {
+      "class_order": [
+        "Normal",
+        "Adventitious"
+      ],
+      "dataset": "HF Lung and BioCAS harmonised",
+      "packaged_sha256": "02549f73f08e0a287cef2c0461a95e27241e72eb0d45c8015764944b6bf5dfef",
+      "source_canonical_paths": [
+        "audit/phase1_max_energy_event_capture/phase1_event_capture_records.csv"
+      ],
+      "source_sha256": {
+        "audit/phase1_max_energy_event_capture/phase1_event_capture_records.csv": "0e25f8c84cae378587766d1fba47c563fd7521a9ac2f360308caf6aa3dea23e6"
+      },
+      "task": "event capture"
+    },
+    "artifacts/predictions/harmonised_bootstrap.csv.gz": {
+      "class_order": {
+        "binary": [
+          "Normal",
+          "Adventitious"
+        ],
+        "coarse": [
+          "Normal",
+          "CAS only",
+          "DAS only",
+          "CAS and DAS"
+        ]
+      },
+      "dataset": "BioCAS2022 harmonised",
+      "packaged_sha256": "dc47e41519429ecfe75aba3c1e5abaf741f661ba20da55ed04a9118fcfa5d1dc",
+      "source_canonical_paths": [
+        "bootstrap_biocas2022/aligned_predictions.csv.gz",
+        "release_staging/biocas_challenge_t2/shared_forward_fixed_alpha_candidate_v1_20260919/bootstrap/bootstrap_draws_exact_thesis_copy.npz"
+      ],
+      "source_sha256": {
+        "bootstrap_biocas2022/aligned_predictions.csv.gz": "711bcf52d8e29352f7431b61a97450106ab0f3178168d0159b0587d44db1cc3b",
+        "release_staging/biocas_challenge_t2/shared_forward_fixed_alpha_candidate_v1_20260919/bootstrap/bootstrap_draws_exact_thesis_copy.npz": "2c3b5ac26cfd24cba1af42cd1ec15a03a596f015978e1343b24eb453ce5d7f86"
+      },
+      "task": "patient cluster bootstrap"
+    },
+    "artifacts/predictions/opera.csv.gz": {
+      "class_order": {
+        "binary": [
+          "Normal",
+          "Adventitious"
+        ],
+        "coarse": [
+          "Normal",
+          "CAS only",
+          "DAS only",
+          "CAS and DAS"
+        ]
+      },
+      "dataset": "BioCAS harmonised",
+      "packaged_sha256": "da20733f333c099246456fea89fc8f89590434cfd3e5db56200ac090f9dee0ac",
+      "source_canonical_paths": [
+        "release_staging/opera_biocas_t2_comparison/reference_results/golden_v1/opera_biocas_t2_predictions.csv.gz",
+        "release_staging/opera_biocas_t2_comparison/reference_results/golden_v1/opera_biocas_t2_probabilities.csv.gz"
+      ],
+      "source_sha256": {
+        "release_staging/opera_biocas_t2_comparison/reference_results/golden_v1/opera_biocas_t2_predictions.csv.gz": "e74e91200f035899e968bd977c6cbeb3a7aa341fbc72d5460fa26319aaeabab8",
+        "release_staging/opera_biocas_t2_comparison/reference_results/golden_v1/opera_biocas_t2_probabilities.csv.gz": "a2d1f69f5b8276f83ba0eec00ea69522b218159d1ab5bcd86c442cbf6d049d2d"
+      },
+      "task": "Binary/Multiclass OPERA comparison"
+    },
+    "artifacts/predictions/progression.csv.gz": {
+      "class_order": {
+        "binary": [
+          "Normal",
+          "Adventitious"
+        ],
+        "coarse": [
+          "Normal",
+          "CAS only",
+          "DAS only",
+          "CAS and DAS"
+        ]
+      },
+      "dataset": "HF Lung and BioCAS harmonised",
+      "packaged_sha256": "a5fc985d9167d0181583432edfcadfbdc96838bc8dc5dbfc495129b36028fce2",
+      "source_canonical_paths": [
+        "data/results/reproducibility/pinned_reference_v1/full_runs/presentation12_full_reproducibility_audit_20260722_145607_PINNED_REFERENCE_V1_FULLRUN/replay_1/phase1_hf_lung/predictions.csv.gz",
+        "data/results/reproducibility/pinned_reference_v1/full_runs/presentation12_full_reproducibility_audit_20260722_145607_PINNED_REFERENCE_V1_FULLRUN/replay_1/phase1_biocas/predictions.csv.gz",
+        "data/results/reproducibility/pinned_reference_v1/full_runs/presentation12_full_reproducibility_audit_20260722_145607_PINNED_REFERENCE_V1_FULLRUN/replay_1/phase2_hf_lung/official_test_predictions.csv.gz",
+        "data/results/reproducibility/pinned_reference_v1/full_runs/presentation12_full_reproducibility_audit_20260722_145607_PINNED_REFERENCE_V1_FULLRUN/replay_1/phase2_biocas/phase2_full_record_cls_mean_20260722_154227/predictions.csv.gz",
+        "data/results/reproducibility/pinned_reference_v1/hf_phase3_canonical_mean_runs/hf_lung_phase3_canonical_mean_reproducibility_20260723_000858/replay_1/hf_lung_v1/phase3_dual_readout_late_fusion_20260723_003324/predictions.csv.gz",
+        "data/results/reproducibility/pinned_reference_v1/resume_runs/presentation12_resume_after_phase3_path_fix_20260722_165259/replay_1/biocas_harmonized/phase3_dual_readout_late_fusion_20260722_173602/predictions.csv.gz"
+      ],
+      "source_sha256": {
+        "data/results/reproducibility/pinned_reference_v1/full_runs/presentation12_full_reproducibility_audit_20260722_145607_PINNED_REFERENCE_V1_FULLRUN/replay_1/phase1_biocas/predictions.csv.gz": "e89e0bdeae411bef9c6a2b294c816bf885093ca9c4ee5eb4c04aa1fcb6f816ee",
+        "data/results/reproducibility/pinned_reference_v1/full_runs/presentation12_full_reproducibility_audit_20260722_145607_PINNED_REFERENCE_V1_FULLRUN/replay_1/phase1_hf_lung/predictions.csv.gz": "d7825ddbaf37105bcd7afd3de0019a76ef306819bef82d599a8033f619c82dcb",
+        "data/results/reproducibility/pinned_reference_v1/full_runs/presentation12_full_reproducibility_audit_20260722_145607_PINNED_REFERENCE_V1_FULLRUN/replay_1/phase2_biocas/phase2_full_record_cls_mean_20260722_154227/predictions.csv.gz": "23b1c9b15425aba61f4c3db576db4fd23af81f8760a7433c808fe443e9596232",
+        "data/results/reproducibility/pinned_reference_v1/full_runs/presentation12_full_reproducibility_audit_20260722_145607_PINNED_REFERENCE_V1_FULLRUN/replay_1/phase2_hf_lung/official_test_predictions.csv.gz": "06e5f3104c63182cc07648d1d159eed0a655388b3ec45c3bcf4e675da2b01095",
+        "data/results/reproducibility/pinned_reference_v1/hf_phase3_canonical_mean_runs/hf_lung_phase3_canonical_mean_reproducibility_20260723_000858/replay_1/hf_lung_v1/phase3_dual_readout_late_fusion_20260723_003324/predictions.csv.gz": "0e87b07966f1444bead6f0362fc3f22d036301293ac6c89bb9375c779803f7ab",
+        "data/results/reproducibility/pinned_reference_v1/resume_runs/presentation12_resume_after_phase3_path_fix_20260722_165259/replay_1/biocas_harmonized/phase3_dual_readout_late_fusion_20260722_173602/predictions.csv.gz": "21114caf826c9b85b8257e4efe608de07277366dcb6fc17813788e07aca9c149"
+      },
+      "task": "Binary/Multiclass progression"
+    },
+    "manifests/biocas_records.csv.gz": {
+      "class_order": {
+        "T2-1": [
+          "Normal",
+          "Adventitious",
+          "Poor Quality"
+        ],
+        "T2-2": [
+          "Normal",
+          "CAS",
+          "DAS",
+          "CAS & DAS",
+          "Poor Quality"
+        ]
+      },
+      "dataset": "BioCAS 2022/2023",
+      "packaged_sha256": "6d7d0ee7365d011ac3bddcc254c327c3c9f56e7dadc4780f8293605b50757db3",
+      "source_canonical_paths": [
+        "data/processed/biocas_harmonized/protocol_v2/records.csv.gz"
+      ],
+      "source_sha256": {
+        "data/processed/biocas_harmonized/protocol_v2/records.csv.gz": "82ba08591079885b2a8d34c8a1ba1709d30233d76e5c68182f4fe7212ea71faa"
+      },
+      "task": "protocol"
+    },
+    "manifests/hf_lung_records.csv.gz": {
+      "class_order": {
+        "Binary": [
+          "Normal",
+          "Adventitious"
+        ],
+        "Multiclass": [
+          "Normal",
+          "CAS only",
+          "DAS only",
+          "CAS and DAS"
+        ]
+      },
+      "dataset": "HF Lung",
+      "packaged_sha256": "b0f00d00d21342b557bcdead5535660bf351af0050b890821c7d23c25046d922",
+      "source_canonical_paths": [
+        "data/processed/hf_lung_v1/protocol_v1/records.csv.gz"
+      ],
+      "source_sha256": {
+        "data/processed/hf_lung_v1/protocol_v1/records.csv.gz": "b9baa6ba2d64534da3d4f97ca96511e96d7cabcae782a3fc1896263c48ed6260"
+      },
+      "task": "protocol"
+    }
+  },
+  "schema": "release_artifact_provenance_v1"
+}

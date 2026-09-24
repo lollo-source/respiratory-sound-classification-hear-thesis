@@ -1,0 +1,59 @@
+{
+  "label": "tab:biocas_challenge_placements",
+  "rows": [
+    {
+      "comparison_set_size": 11,
+      "estimated_position": 1,
+      "evaluation": "biocas2022",
+      "published_table": "Table II",
+      "score": 0.7214981710456408,
+      "status": "retrospective estimate, not an official submission",
+      "task": "T2-1"
+    },
+    {
+      "comparison_set_size": 11,
+      "estimated_position": 6,
+      "evaluation": "biocas2022",
+      "published_table": "Table II",
+      "score": 0.5072296108171328,
+      "status": "retrospective estimate, not an official submission",
+      "task": "T2-2"
+    },
+    {
+      "comparison_set_size": 6,
+      "estimated_position": 1,
+      "evaluation": "biocas2023",
+      "published_table": "Table II",
+      "score": 0.7640003883733104,
+      "status": "retrospective estimate, not an official submission",
+      "task": "T2-1"
+    },
+    {
+      "comparison_set_size": 6,
+      "estimated_position": 1,
+      "evaluation": "biocas2023",
+      "published_table": "Table II",
+      "score": 0.5943859129946996,
+      "status": "retrospective estimate, not an official submission",
+      "task": "T2-2"
+    },
+    {
+      "comparison_set_size": 4,
+      "estimated_position": 1,
+      "evaluation": "biocas2023",
+      "published_table": "Table III",
+      "score": 0.7640003883733104,
+      "status": "retrospective estimate, not an official submission",
+      "task": "T2-1"
+    },
+    {
+      "comparison_set_size": 4,
+      "estimated_position": 2,
+      "evaluation": "biocas2023",
+      "published_table": "Table III",
+      "score": 0.5943859129946996,
+      "status": "retrospective estimate, not an official submission",
+      "task": "T2-2"
+    }
+  ]
+}

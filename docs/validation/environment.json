@@ -1,0 +1,51 @@
+{
+  "document_status": "historical_certification_evidence",
+  "captured_at_utc": "2026-09-22T14:40:29+00:00",
+  "cuda": {
+    "cudnn_version": 90100,
+    "device_capability": [
+      8,
+      9
+    ],
+    "device_name": "NVIDIA L4",
+    "torch_cuda_version": "12.4",
+    "extraction_device_argument": "cuda:5",
+    "datasets_extracted": [
+      "HF_Lung_V1",
+      "BioCAS_Harmonized"
+    ]
+  },
+  "determinism": {
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": false,
+    "tf32_cudnn_allowed": true,
+    "tf32_matmul_allowed": false,
+    "torch_deterministic_algorithms_enabled": false
+  },
+  "model": {
+    "preprocessing_sha256": "1f2dcc0406e86d1162c97c91782e8488f290b9f41006d7f5fd5035bbf4c88957",
+    "pytorch_model_bin_sha256": "d44d355816ee4315f67d7810da274409e9b1a6570325fc5ba9ae27555fd81723",
+    "repository": "google/hear-pytorch",
+    "revision": "f791cd42437c3e268c8ac84707e3508900f65f1a"
+  },
+  "packages": {
+    "librosa": "0.11.0",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.7.2",
+    "scipy": "1.15.3",
+    "torch": "2.6.0+cu124",
+    "torchaudio": "2.6.0+cu124",
+    "transformers": "5.8.1"
+  },
+  "platform": "Linux-5.15.0-191-generic-x86_64-with-glibc2.35",
+  "purpose": "environment used to validate internal HeAR feature evidence; this does not certify Full Reproduction",
+  "python": "3.10.20 (main, Mar 11 2026, 17:46:40) [GCC 14.3.0]",
+  "downstream_replay_deterministic_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "PYTHONHASHSEED": "20260710"
+  }
+}

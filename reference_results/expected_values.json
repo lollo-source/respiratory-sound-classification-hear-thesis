@@ -1,0 +1,1735 @@
+{
+  "display_decimals": {
+    "tab:biocas_challenge_class_distribution": 4,
+    "tab:biocas_challenge_placements": 4,
+    "tab:biocas_harmonised_class_distribution": 4,
+    "tab:bootstrap_challenge_readouts": 4,
+    "tab:bootstrap_harmonised": 4,
+    "tab:challenge_readout_comparison": 4,
+    "tab:complete_record_per_class_recall": 4,
+    "tab:complete_record_results": 4,
+    "tab:dual_readout_per_class_recall": 4,
+    "tab:dual_readout_results": 4,
+    "tab:hear_opera_comparison": 4,
+    "tab:hflung_class_distribution": 4,
+    "tab:hflung_device_distribution": 1,
+    "tab:overall_harmonised_comparison": 4,
+    "tab:single_window_event_capture": 1,
+    "tab:single_window_per_class_recall": 4,
+    "tab:single_window_results": 4
+  },
+  "manuscript_sha256": "f89b6b8ecc40acca965b018183863dc9b6f2fe0e71b3e038f2f2cdb3e258cbd7",
+  "precision": "full precision retained from audited canonical artifacts",
+  "schema": "frozen_thesis_expected_values_v1",
+  "tables": {
+    "tab:biocas_challenge_class_distribution": {
+      "label": "tab:biocas_challenge_class_distribution",
+      "rows": [
+        {
+          "class": "Normal",
+          "count": 1303,
+          "split": "train2022",
+          "task": "T2-1"
+        },
+        {
+          "class": "Adventitious",
+          "count": 469,
+          "split": "train2022",
+          "task": "T2-1"
+        },
+        {
+          "class": "Poor Quality",
+          "count": 177,
+          "split": "train2022",
+          "task": "T2-1"
+        },
+        {
+          "class": "Normal",
+          "count": 482,
+          "split": "test2022",
+          "task": "T2-1"
+        },
+        {
+          "class": "Adventitious",
+          "count": 242,
+          "split": "test2022",
+          "task": "T2-1"
+        },
+        {
+          "class": "Poor Quality",
+          "count": 10,
+          "split": "test2022",
+          "task": "T2-1"
+        },
+        {
+          "class": "Normal",
+          "count": 539,
+          "split": "test2023",
+          "task": "T2-1"
+        },
+        {
+          "class": "Adventitious",
+          "count": 289,
+          "split": "test2023",
+          "task": "T2-1"
+        },
+        {
+          "class": "Poor Quality",
+          "count": 43,
+          "split": "test2023",
+          "task": "T2-1"
+        },
+        {
+          "class": "Normal",
+          "count": 1303,
+          "split": "train2022",
+          "task": "T2-2"
+        },
+        {
+          "class": "CAS",
+          "count": 126,
+          "split": "train2022",
+          "task": "T2-2"
+        },
+        {
+          "class": "DAS",
+          "count": 248,
+          "split": "train2022",
+          "task": "T2-2"
+        },
+        {
+          "class": "CAS & DAS",
+          "count": 95,
+          "split": "train2022",
+          "task": "T2-2"
+        },
+        {
+          "class": "Poor Quality",
+          "count": 177,
+          "split": "train2022",
+          "task": "T2-2"
+        },
+        {
+          "class": "Normal",
+          "count": 482,
+          "split": "test2022",
+          "task": "T2-2"
+        },
+        {
+          "class": "CAS",
+          "count": 107,
+          "split": "test2022",
+          "task": "T2-2"
+        },
+        {
+          "class": "DAS",
+          "count": 99,
+          "split": "test2022",
+          "task": "T2-2"
+        },
+        {
+          "class": "CAS & DAS",
+          "count": 36,
+          "split": "test2022",
+          "task": "T2-2"
+        },
+        {
+          "class": "Poor Quality",
+          "count": 10,
+          "split": "test2022",
+          "task": "T2-2"
+        },
+        {
+          "class": "Normal",
+          "count": 539,
+          "split": "test2023",
+          "task": "T2-2"
+        },
+        {
+          "class": "CAS",
+          "count": 135,
+          "split": "test2023",
+          "task": "T2-2"
+        },
+        {
+          "class": "DAS",
+          "count": 133,
+          "split": "test2023",
+          "task": "T2-2"
+        },
+        {
+          "class": "CAS & DAS",
+          "count": 21,
+          "split": "test2023",
+          "task": "T2-2"
+        },
+        {
+          "class": "Poor Quality",
+          "count": 43,
+          "split": "test2023",
+          "task": "T2-2"
+        }
+      ]
+    },
+    "tab:biocas_challenge_placements": {
+      "label": "tab:biocas_challenge_placements",
+      "rows": [
+        {
+          "comparison_set_size": 11,
+          "estimated_position": 1,
+          "evaluation": "biocas2022",
+          "published_table": "Table II",
+          "score": 0.7214981710456408,
+          "status": "retrospective estimate, not an official submission",
+          "task": "T2-1"
+        },
+        {
+          "comparison_set_size": 11,
+          "estimated_position": 6,
+          "evaluation": "biocas2022",
+          "published_table": "Table II",
+          "score": 0.5072296108171328,
+          "status": "retrospective estimate, not an official submission",
+          "task": "T2-2"
+        },
+        {
+          "comparison_set_size": 6,
+          "estimated_position": 1,
+          "evaluation": "biocas2023",
+          "published_table": "Table II",
+          "score": 0.7640003883733104,
+          "status": "retrospective estimate, not an official submission",
+          "task": "T2-1"
+        },
+        {
+          "comparison_set_size": 6,
+          "estimated_position": 1,
+          "evaluation": "biocas2023",
+          "published_table": "Table II",
+          "score": 0.5943859129946996,
+          "status": "retrospective estimate, not an official submission",
+          "task": "T2-2"
+        },
+        {
+          "comparison_set_size": 4,
+          "estimated_position": 1,
+          "evaluation": "biocas2023",
+          "published_table": "Table III",
+          "score": 0.7640003883733104,
+          "status": "retrospective estimate, not an official submission",
+          "task": "T2-1"
+        },
+        {
+          "comparison_set_size": 4,
+          "estimated_position": 2,
+          "evaluation": "biocas2023",
+          "published_table": "Table III",
+          "score": 0.5943859129946996,
+          "status": "retrospective estimate, not an official submission",
+          "task": "T2-2"
+        }
+      ]
+    },
+    "tab:biocas_harmonised_class_distribution": {
+      "label": "tab:biocas_harmonised_class_distribution",
+      "rows": [
+        {
+          "class": "Normal",
+          "count": 1303,
+          "split": "train2022",
+          "task": "binary"
+        },
+        {
+          "class": "Adventitious",
+          "count": 468,
+          "split": "train2022",
+          "task": "binary"
+        },
+        {
+          "class": "Normal",
+          "count": 482,
+          "split": "test2022",
+          "task": "binary"
+        },
+        {
+          "class": "Adventitious",
+          "count": 242,
+          "split": "test2022",
+          "task": "binary"
+        },
+        {
+          "class": "Normal",
+          "count": 539,
+          "split": "test2023",
+          "task": "binary"
+        },
+        {
+          "class": "Adventitious",
+          "count": 289,
+          "split": "test2023",
+          "task": "binary"
+        },
+        {
+          "class": "Normal",
+          "count": 1303,
+          "split": "train2022",
+          "task": "coarse"
+        },
+        {
+          "class": "CAS only",
+          "count": 126,
+          "split": "train2022",
+          "task": "coarse"
+        },
+        {
+          "class": "DAS only",
+          "count": 247,
+          "split": "train2022",
+          "task": "coarse"
+        },
+        {
+          "class": "CAS and DAS",
+          "count": 95,
+          "split": "train2022",
+          "task": "coarse"
+        },
+        {
+          "class": "Normal",
+          "count": 482,
+          "split": "test2022",
+          "task": "coarse"
+        },
+        {
+          "class": "CAS only",
+          "count": 107,
+          "split": "test2022",
+          "task": "coarse"
+        },
+        {
+          "class": "DAS only",
+          "count": 99,
+          "split": "test2022",
+          "task": "coarse"
+        },
+        {
+          "class": "CAS and DAS",
+          "count": 36,
+          "split": "test2022",
+          "task": "coarse"
+        },
+        {
+          "class": "Normal",
+          "count": 539,
+          "split": "test2023",
+          "task": "coarse"
+        },
+        {
+          "class": "CAS only",
+          "count": 135,
+          "split": "test2023",
+          "task": "coarse"
+        },
+        {
+          "class": "DAS only",
+          "count": 133,
+          "split": "test2023",
+          "task": "coarse"
+        },
+        {
+          "class": "CAS and DAS",
+          "count": 21,
+          "split": "test2023",
+          "task": "coarse"
+        }
+      ]
+    },
+    "tab:bootstrap_challenge_readouts": {
+      "label": "tab:bootstrap_challenge_readouts",
+      "rows": [
+        {
+          "ci_lower": 0.6098958907633258,
+          "ci_upper": 0.7124461273619035,
+          "method": "CLS",
+          "metric": "Score",
+          "point_estimate": 0.666829492279833,
+          "replicates": 10000,
+          "task": "T2-1"
+        },
+        {
+          "ci_lower": 0.6614787636557846,
+          "ci_upper": 0.7585673994853053,
+          "method": "Temporal Grid",
+          "metric": "Score",
+          "point_estimate": 0.7144049496631308,
+          "replicates": 10000,
+          "task": "T2-1"
+        },
+        {
+          "ci_lower": 0.6687772786513576,
+          "ci_upper": 0.7662263024978729,
+          "method": "Fusion",
+          "metric": "Score",
+          "point_estimate": 0.7214981710456408,
+          "replicates": 10000,
+          "task": "T2-1"
+        },
+        {
+          "ci_lower": 0.010429884457809674,
+          "ci_upper": 0.08694895896667341,
+          "method": "Temporal Grid - CLS",
+          "metric": "Score",
+          "point_estimate": 0.047575457383297826,
+          "replicates": 10000,
+          "task": "T2-1"
+        },
+        {
+          "ci_lower": 0.027493235800818628,
+          "ci_upper": 0.08524390722281246,
+          "method": "Fusion - CLS",
+          "metric": "Score",
+          "point_estimate": 0.05466867876580783,
+          "replicates": 10000,
+          "task": "T2-1"
+        },
+        {
+          "ci_lower": -0.018194973169237634,
+          "ci_upper": 0.031791223385574836,
+          "method": "Fusion - Temporal Grid",
+          "metric": "Score",
+          "point_estimate": 0.0070932213825100066,
+          "replicates": 10000,
+          "task": "T2-1"
+        },
+        {
+          "ci_lower": 0.42435435703119073,
+          "ci_upper": 0.5228804289040189,
+          "method": "CLS",
+          "metric": "Score",
+          "point_estimate": 0.4769299708715977,
+          "replicates": 10000,
+          "task": "T2-2"
+        },
+        {
+          "ci_lower": 0.4747695074845316,
+          "ci_upper": 0.569113999889817,
+          "method": "Temporal Grid",
+          "metric": "Score",
+          "point_estimate": 0.5239650848216146,
+          "replicates": 10000,
+          "task": "T2-2"
+        },
+        {
+          "ci_lower": 0.44926565466087026,
+          "ci_upper": 0.5599869260446363,
+          "method": "Fusion",
+          "metric": "Score",
+          "point_estimate": 0.5072296108171328,
+          "replicates": 10000,
+          "task": "T2-2"
+        },
+        {
+          "ci_lower": -0.01058595557652808,
+          "ci_upper": 0.10443367233807267,
+          "method": "Temporal Grid - CLS",
+          "metric": "Score",
+          "point_estimate": 0.047035113950016916,
+          "replicates": 10000,
+          "task": "T2-2"
+        },
+        {
+          "ci_lower": -0.024361967934627683,
+          "ci_upper": 0.07971012825780181,
+          "method": "Fusion - CLS",
+          "metric": "Score",
+          "point_estimate": 0.030299639945535084,
+          "replicates": 10000,
+          "task": "T2-2"
+        },
+        {
+          "ci_lower": -0.05339320049639317,
+          "ci_upper": 0.01758095961018846,
+          "method": "Fusion - Temporal Grid",
+          "metric": "Score",
+          "point_estimate": -0.016735474004481832,
+          "replicates": 10000,
+          "task": "T2-2"
+        }
+      ]
+    },
+    "tab:bootstrap_harmonised": {
+      "label": "tab:bootstrap_harmonised",
+      "rows": [
+        {
+          "ci_lower": 0.5744663425497639,
+          "ci_upper": 0.6801704186949368,
+          "method": "Single Window",
+          "metric": "balanced_accuracy",
+          "point_estimate": 0.6306711018140667,
+          "replicates": 10000,
+          "task": "binary"
+        },
+        {
+          "ci_lower": 0.5718173529735889,
+          "ci_upper": 0.6788562316017874,
+          "method": "Single Window",
+          "metric": "macro_f1",
+          "point_estimate": 0.6298410804822974,
+          "replicates": 10000,
+          "task": "binary"
+        },
+        {
+          "ci_lower": 0.6974885509893795,
+          "ci_upper": 0.7907161813562891,
+          "method": "Dual Readout",
+          "metric": "balanced_accuracy",
+          "point_estimate": 0.747573814341072,
+          "replicates": 10000,
+          "task": "binary"
+        },
+        {
+          "ci_lower": 0.6951190543424881,
+          "ci_upper": 0.7894429038536943,
+          "method": "Dual Readout",
+          "metric": "macro_f1",
+          "point_estimate": 0.7465505464480875,
+          "replicates": 10000,
+          "task": "binary"
+        },
+        {
+          "ci_lower": 0.07820194532039808,
+          "ci_upper": 0.15728283507775337,
+          "method": "Dual Readout - Single Window",
+          "metric": "balanced_accuracy",
+          "point_estimate": 0.11690271252700524,
+          "replicates": 10000,
+          "task": "binary"
+        },
+        {
+          "ci_lower": 0.07673483189988822,
+          "ci_upper": 0.15820455568678646,
+          "method": "Dual Readout - Single Window",
+          "metric": "macro_f1",
+          "point_estimate": 0.11670946596579013,
+          "replicates": 10000,
+          "task": "binary"
+        },
+        {
+          "ci_lower": 0.2700459533814003,
+          "ci_upper": 0.35960933236053966,
+          "method": "Single Window",
+          "metric": "balanced_accuracy",
+          "point_estimate": 0.32112732592140825,
+          "replicates": 10000,
+          "task": "coarse"
+        },
+        {
+          "ci_lower": 0.26878221099363764,
+          "ci_upper": 0.3501521263041913,
+          "method": "Single Window",
+          "metric": "macro_f1",
+          "point_estimate": 0.3127104794121066,
+          "replicates": 10000,
+          "task": "coarse"
+        },
+        {
+          "ci_lower": 0.4109438924338431,
+          "ci_upper": 0.5713947829660959,
+          "method": "Dual Readout",
+          "metric": "balanced_accuracy",
+          "point_estimate": 0.5024277658502267,
+          "replicates": 10000,
+          "task": "coarse"
+        },
+        {
+          "ci_lower": 0.42227932748228,
+          "ci_upper": 0.5775770334095428,
+          "method": "Dual Readout",
+          "metric": "macro_f1",
+          "point_estimate": 0.5081634627881321,
+          "replicates": 10000,
+          "task": "coarse"
+        },
+        {
+          "ci_lower": 0.10432813775544184,
+          "ci_upper": 0.24370435921729808,
+          "method": "Dual Readout - Single Window",
+          "metric": "balanced_accuracy",
+          "point_estimate": 0.1813004399288185,
+          "replicates": 10000,
+          "task": "coarse"
+        },
+        {
+          "ci_lower": 0.12404811253249215,
+          "ci_upper": 0.25723612604649854,
+          "method": "Dual Readout - Single Window",
+          "metric": "macro_f1",
+          "point_estimate": 0.19545298337602546,
+          "replicates": 10000,
+          "task": "coarse"
+        }
+      ]
+    },
+    "tab:challenge_readout_comparison": {
+      "label": "tab:challenge_readout_comparison",
+      "rows": [
+        {
+          "AS": 0.6677754535166833,
+          "HS": 0.6658835310429826,
+          "SE": 0.6322314049586777,
+          "SP": 0.7033195020746889,
+          "Score": 0.666829492279833,
+          "evaluation": "biocas2022",
+          "method": "CLS",
+          "record_count": 734,
+          "task": "T2-1"
+        },
+        {
+          "AS": 0.7226518294983024,
+          "HS": 0.7203445125929793,
+          "SE": 0.6818181818181818,
+          "SP": 0.7634854771784232,
+          "Score": 0.7214981710456408,
+          "evaluation": "biocas2022",
+          "method": "Fusion",
+          "record_count": 734,
+          "task": "T2-1"
+        },
+        {
+          "AS": 0.7153989918041219,
+          "HS": 0.7134109075221398,
+          "SE": 0.6776859504132231,
+          "SP": 0.7531120331950207,
+          "Score": 0.7144049496631308,
+          "evaluation": "biocas2022",
+          "method": "Temporal Grid",
+          "record_count": 734,
+          "task": "T2-1"
+        },
+        {
+          "AS": 0.5190665615033778,
+          "HS": 0.4347933802398176,
+          "SE": 0.30991735537190085,
+          "SP": 0.7282157676348547,
+          "Score": 0.4769299708715977,
+          "evaluation": "biocas2022",
+          "method": "CLS",
+          "record_count": 734,
+          "task": "T2-2"
+        },
+        {
+          "AS": 0.5647097150303487,
+          "HS": 0.4497495066039168,
+          "SE": 0.30991735537190085,
+          "SP": 0.8195020746887967,
+          "Score": 0.5072296108171328,
+          "evaluation": "biocas2022",
+          "method": "Fusion",
+          "record_count": 734,
+          "task": "T2-2"
+        },
+        {
+          "AS": 0.5687905078701004,
+          "HS": 0.4791396617731288,
+          "SE": 0.34297520661157027,
+          "SP": 0.7946058091286307,
+          "Score": 0.5239650848216146,
+          "evaluation": "biocas2022",
+          "method": "Temporal Grid",
+          "record_count": 734,
+          "task": "T2-2"
+        },
+        {
+          "AS": 0.7265023656521432,
+          "HS": 0.7153965785381027,
+          "SE": 0.6366782006920415,
+          "SP": 0.8163265306122449,
+          "Score": 0.720949472095123,
+          "evaluation": "biocas2023",
+          "method": "CLS",
+          "record_count": 871,
+          "task": "T2-1"
+        },
+        {
+          "AS": 0.76411527177716,
+          "HS": 0.7638855049694607,
+          "SE": 0.7508650519031141,
+          "SP": 0.7773654916512059,
+          "Score": 0.7640003883733104,
+          "evaluation": "biocas2023",
+          "method": "Fusion",
+          "record_count": 871,
+          "task": "T2-1"
+        },
+        {
+          "AS": 0.747093489802338,
+          "HS": 0.7451224699356824,
+          "SE": 0.7854671280276817,
+          "SP": 0.7087198515769945,
+          "Score": 0.7461079798690102,
+          "evaluation": "biocas2023",
+          "method": "Temporal Grid",
+          "record_count": 871,
+          "task": "T2-1"
+        },
+        {
+          "AS": 0.5557003550083135,
+          "HS": 0.4657933042212518,
+          "SE": 0.33217993079584773,
+          "SP": 0.7792207792207793,
+          "Score": 0.5107468296147827,
+          "evaluation": "biocas2023",
+          "method": "CLS",
+          "record_count": 871,
+          "task": "T2-2"
+        },
+        {
+          "AS": 0.6365594366088682,
+          "HS": 0.552212389380531,
+          "SE": 0.40484429065743943,
+          "SP": 0.8682745825602969,
+          "Score": 0.5943859129946996,
+          "evaluation": "biocas2023",
+          "method": "Fusion",
+          "record_count": 871,
+          "task": "T2-2"
+        },
+        {
+          "AS": 0.6192359296659841,
+          "HS": 0.5565058729615692,
+          "SE": 0.42214532871972316,
+          "SP": 0.8163265306122449,
+          "Score": 0.5878709013137766,
+          "evaluation": "biocas2023",
+          "method": "Temporal Grid",
+          "record_count": 871,
+          "task": "T2-2"
+        }
+      ]
+    },
+    "tab:complete_record_per_class_recall": {
+      "label": "tab:complete_record_per_class_recall",
+      "rows": [
+        {
+          "class": "Normal",
+          "dataset": "BioCAS2022",
+          "delta_recall": 0.049792531120331884,
+          "evaluation": "test2022",
+          "recall": 0.7946058091286307,
+          "task": "binary"
+        },
+        {
+          "class": "Adventitious",
+          "dataset": "BioCAS2022",
+          "delta_recall": 0.1322314049586777,
+          "evaluation": "test2022",
+          "recall": 0.6487603305785123,
+          "task": "binary"
+        },
+        {
+          "class": "Normal",
+          "dataset": "BioCAS2022",
+          "delta_recall": 0.08091286307053935,
+          "evaluation": "test2022",
+          "recall": 0.8257261410788381,
+          "task": "coarse"
+        },
+        {
+          "class": "CAS only",
+          "dataset": "BioCAS2022",
+          "delta_recall": 0.1588785046728972,
+          "evaluation": "test2022",
+          "recall": 0.35514018691588783,
+          "task": "coarse"
+        },
+        {
+          "class": "DAS only",
+          "dataset": "BioCAS2022",
+          "delta_recall": 0.2222222222222222,
+          "evaluation": "test2022",
+          "recall": 0.3434343434343434,
+          "task": "coarse"
+        },
+        {
+          "class": "CAS and DAS",
+          "dataset": "BioCAS2022",
+          "delta_recall": 0.19444444444444448,
+          "evaluation": "test2022",
+          "recall": 0.4166666666666667,
+          "task": "coarse"
+        },
+        {
+          "class": "Normal",
+          "dataset": "BioCAS2023",
+          "delta_recall": 0.027829313543599188,
+          "evaluation": "test2023",
+          "recall": 0.9090909090909091,
+          "task": "binary"
+        },
+        {
+          "class": "Adventitious",
+          "dataset": "BioCAS2023",
+          "delta_recall": 0.22491349480968864,
+          "evaluation": "test2023",
+          "recall": 0.6193771626297578,
+          "task": "binary"
+        },
+        {
+          "class": "Normal",
+          "dataset": "BioCAS2023",
+          "delta_recall": 0.01855287569573283,
+          "evaluation": "test2023",
+          "recall": 0.8794063079777366,
+          "task": "coarse"
+        },
+        {
+          "class": "CAS only",
+          "dataset": "BioCAS2023",
+          "delta_recall": 0.08148148148148146,
+          "evaluation": "test2023",
+          "recall": 0.2518518518518518,
+          "task": "coarse"
+        },
+        {
+          "class": "DAS only",
+          "dataset": "BioCAS2023",
+          "delta_recall": 0.2857142857142857,
+          "evaluation": "test2023",
+          "recall": 0.39849624060150374,
+          "task": "coarse"
+        },
+        {
+          "class": "CAS and DAS",
+          "dataset": "BioCAS2023",
+          "delta_recall": -0.047619047619047616,
+          "evaluation": "test2023",
+          "recall": 0.38095238095238093,
+          "task": "coarse"
+        },
+        {
+          "class": "Normal",
+          "dataset": "HF_Lung",
+          "delta_recall": 0.056056056056056014,
+          "evaluation": "official_test",
+          "recall": 0.6306306306306306,
+          "task": "binary"
+        },
+        {
+          "class": "Adventitious",
+          "dataset": "HF_Lung",
+          "delta_recall": -0.01985370950888199,
+          "evaluation": "official_test",
+          "recall": 0.6562173458725182,
+          "task": "binary"
+        },
+        {
+          "class": "Normal",
+          "dataset": "HF_Lung",
+          "delta_recall": 0.034034034034034044,
+          "evaluation": "official_test",
+          "recall": 0.7187187187187187,
+          "task": "coarse"
+        },
+        {
+          "class": "CAS only",
+          "dataset": "HF_Lung",
+          "delta_recall": 0.04584040747028861,
+          "evaluation": "official_test",
+          "recall": 0.23089983022071306,
+          "task": "coarse"
+        },
+        {
+          "class": "DAS only",
+          "dataset": "HF_Lung",
+          "delta_recall": 0.1824324324324324,
+          "evaluation": "official_test",
+          "recall": 0.5304054054054054,
+          "task": "coarse"
+        },
+        {
+          "class": "CAS and DAS",
+          "dataset": "HF_Lung",
+          "delta_recall": -0.09722222222222224,
+          "evaluation": "official_test",
+          "recall": 0.05555555555555555,
+          "task": "coarse"
+        }
+      ]
+    },
+    "tab:complete_record_results": {
+      "label": "tab:complete_record_results",
+      "rows": [
+        {
+          "accuracy": 0.7458563535911602,
+          "balanced_accuracy": 0.7216830698535714,
+          "dataset": "BioCAS2022",
+          "delta_accuracy": 0.07734806629834257,
+          "delta_balanced_accuracy": 0.09101196803950473,
+          "delta_macro_f1": 0.08857785843125154,
+          "evaluation": "test2022",
+          "macro_f1": 0.7184189389135489,
+          "record_count": 724,
+          "task": "binary"
+        },
+        {
+          "accuracy": 0.669889502762431,
+          "balanced_accuracy": 0.48524183452393405,
+          "dataset": "BioCAS2022",
+          "delta_accuracy": 0.11740331491712708,
+          "delta_balanced_accuracy": 0.1641145086025258,
+          "delta_macro_f1": 0.16195011990669944,
+          "evaluation": "test2022",
+          "macro_f1": 0.47466059931880605,
+          "record_count": 724,
+          "task": "coarse"
+        },
+        {
+          "accuracy": 0.8079710144927537,
+          "balanced_accuracy": 0.7642340358603334,
+          "dataset": "BioCAS2023",
+          "delta_accuracy": 0.09661835748792269,
+          "delta_balanced_accuracy": 0.12637140417664394,
+          "delta_macro_f1": 0.13282344806364732,
+          "evaluation": "test2023",
+          "macro_f1": 0.7764301713641374,
+          "record_count": 828,
+          "task": "binary"
+        },
+        {
+          "accuracy": 0.6871980676328503,
+          "balanced_accuracy": 0.47767669534586826,
+          "dataset": "BioCAS2023",
+          "delta_accuracy": 0.07004830917874405,
+          "delta_balanced_accuracy": 0.08453239881811309,
+          "delta_macro_f1": 0.10810564638766207,
+          "evaluation": "test2023",
+          "macro_f1": 0.4519631528398212,
+          "record_count": 828,
+          "task": "coarse"
+        },
+        {
+          "accuracy": 0.6431492842535788,
+          "balanced_accuracy": 0.6434239882515744,
+          "dataset": "HF_Lung",
+          "delta_accuracy": 0.01891615541922298,
+          "delta_balanced_accuracy": 0.018101173273586957,
+          "delta_macro_f1": 0.019439903671860104,
+          "evaluation": "official_test",
+          "macro_f1": 0.6431489111672659,
+          "record_count": 1956,
+          "task": "binary"
+        },
+        {
+          "accuracy": 0.5189161554192229,
+          "balanced_accuracy": 0.38389487747509815,
+          "dataset": "HF_Lung",
+          "delta_accuracy": 0.05521472392638033,
+          "delta_balanced_accuracy": 0.04127116292863314,
+          "delta_macro_f1": 0.03511756247777137,
+          "evaluation": "official_test",
+          "macro_f1": 0.3630709379299041,
+          "record_count": 1956,
+          "task": "coarse"
+        }
+      ]
+    },
+    "tab:dual_readout_per_class_recall": {
+      "label": "tab:dual_readout_per_class_recall",
+      "rows": [
+        {
+          "class": "Normal",
+          "dataset": "BioCAS2022",
+          "delta_recall": 0.03112033195020747,
+          "evaluation": "test2022",
+          "recall": 0.8257261410788381,
+          "task": "binary"
+        },
+        {
+          "class": "Adventitious",
+          "dataset": "BioCAS2022",
+          "delta_recall": 0.02066115702479343,
+          "evaluation": "test2022",
+          "recall": 0.6694214876033058,
+          "task": "binary"
+        },
+        {
+          "class": "Normal",
+          "dataset": "BioCAS2022",
+          "delta_recall": 0.049792531120331995,
+          "evaluation": "test2022",
+          "recall": 0.8755186721991701,
+          "task": "coarse"
+        },
+        {
+          "class": "CAS only",
+          "dataset": "BioCAS2022",
+          "delta_recall": 0.04672897196261683,
+          "evaluation": "test2022",
+          "recall": 0.40186915887850466,
+          "task": "coarse"
+        },
+        {
+          "class": "DAS only",
+          "dataset": "BioCAS2022",
+          "delta_recall": 0.0,
+          "evaluation": "test2022",
+          "recall": 0.3434343434343434,
+          "task": "coarse"
+        },
+        {
+          "class": "CAS and DAS",
+          "dataset": "BioCAS2022",
+          "delta_recall": -0.02777777777777779,
+          "evaluation": "test2022",
+          "recall": 0.3888888888888889,
+          "task": "coarse"
+        },
+        {
+          "class": "Normal",
+          "dataset": "BioCAS2023",
+          "delta_recall": -0.025974025974025983,
+          "evaluation": "test2023",
+          "recall": 0.8831168831168831,
+          "task": "binary"
+        },
+        {
+          "class": "Adventitious",
+          "dataset": "BioCAS2023",
+          "delta_recall": 0.03114186851211065,
+          "evaluation": "test2023",
+          "recall": 0.6505190311418685,
+          "task": "binary"
+        },
+        {
+          "class": "Normal",
+          "dataset": "BioCAS2023",
+          "delta_recall": -0.011131725417439675,
+          "evaluation": "test2023",
+          "recall": 0.8682745825602969,
+          "task": "coarse"
+        },
+        {
+          "class": "CAS only",
+          "dataset": "BioCAS2023",
+          "delta_recall": 0.04444444444444445,
+          "evaluation": "test2023",
+          "recall": 0.2962962962962963,
+          "task": "coarse"
+        },
+        {
+          "class": "DAS only",
+          "dataset": "BioCAS2023",
+          "delta_recall": 0.007518796992481203,
+          "evaluation": "test2023",
+          "recall": 0.40601503759398494,
+          "task": "coarse"
+        },
+        {
+          "class": "CAS and DAS",
+          "dataset": "BioCAS2023",
+          "delta_recall": -0.047619047619047616,
+          "evaluation": "test2023",
+          "recall": 0.3333333333333333,
+          "task": "coarse"
+        },
+        {
+          "class": "Normal",
+          "dataset": "HF_Lung",
+          "delta_recall": 0.016016016016015988,
+          "evaluation": "official_test",
+          "recall": 0.6466466466466466,
+          "task": "binary"
+        },
+        {
+          "class": "Adventitious",
+          "dataset": "HF_Lung",
+          "delta_recall": -0.014629049111807624,
+          "evaluation": "official_test",
+          "recall": 0.6415882967607106,
+          "task": "binary"
+        },
+        {
+          "class": "Normal",
+          "dataset": "HF_Lung",
+          "delta_recall": 0.00700700700700696,
+          "evaluation": "official_test",
+          "recall": 0.7257257257257257,
+          "task": "coarse"
+        },
+        {
+          "class": "CAS only",
+          "dataset": "HF_Lung",
+          "delta_recall": -0.01528013582342952,
+          "evaluation": "official_test",
+          "recall": 0.21561969439728354,
+          "task": "coarse"
+        },
+        {
+          "class": "DAS only",
+          "dataset": "HF_Lung",
+          "delta_recall": 0.0033783783783783994,
+          "evaluation": "official_test",
+          "recall": 0.5337837837837838,
+          "task": "coarse"
+        },
+        {
+          "class": "CAS and DAS",
+          "dataset": "HF_Lung",
+          "delta_recall": 0.05555555555555555,
+          "evaluation": "official_test",
+          "recall": 0.1111111111111111,
+          "task": "coarse"
+        }
+      ]
+    },
+    "tab:dual_readout_results": {
+      "label": "tab:dual_readout_results",
+      "rows": [
+        {
+          "accuracy": 0.7734806629834254,
+          "balanced_accuracy": 0.747573814341072,
+          "dataset": "BioCAS2022",
+          "delta_accuracy": 0.027624309392265234,
+          "delta_balanced_accuracy": 0.025890744487500505,
+          "delta_macro_f1": 0.028131607534538583,
+          "evaluation": "test2022",
+          "macro_f1": 0.7465505464480875,
+          "record_count": 724,
+          "task": "binary"
+        },
+        {
+          "accuracy": 0.7085635359116023,
+          "balanced_accuracy": 0.5024277658502267,
+          "dataset": "BioCAS2022",
+          "delta_accuracy": 0.03867403314917128,
+          "delta_balanced_accuracy": 0.017185931326292703,
+          "delta_macro_f1": 0.033502863469326016,
+          "evaluation": "test2022",
+          "macro_f1": 0.5081634627881321,
+          "record_count": 724,
+          "task": "coarse"
+        },
+        {
+          "accuracy": 0.8019323671497585,
+          "balanced_accuracy": 0.7668179571293758,
+          "dataset": "BioCAS2023",
+          "delta_accuracy": -0.006038647342995196,
+          "delta_balanced_accuracy": 0.0025839212690423885,
+          "delta_macro_f1": -0.001758725724949728,
+          "evaluation": "test2023",
+          "macro_f1": 0.7746714456391877,
+          "record_count": 828,
+          "task": "binary"
+        },
+        {
+          "accuracy": 0.6871980676328503,
+          "balanced_accuracy": 0.4759798124459778,
+          "dataset": "BioCAS2023",
+          "delta_accuracy": 0.0,
+          "delta_balanced_accuracy": -0.0016968828998904506,
+          "delta_macro_f1": 0.0058511571593557465,
+          "evaluation": "test2023",
+          "macro_f1": 0.45781430999917694,
+          "record_count": 828,
+          "task": "coarse"
+        },
+        {
+          "accuracy": 0.6441717791411042,
+          "balanced_accuracy": 0.6441174717036786,
+          "dataset": "HF_Lung",
+          "delta_accuracy": 0.0010224948875254825,
+          "delta_balanced_accuracy": 0.0006934834521041822,
+          "delta_macro_f1": 0.0009276061486879206,
+          "evaluation": "official_test",
+          "macro_f1": 0.6440765173159538,
+          "record_count": 1956,
+          "task": "binary"
+        },
+        {
+          "accuracy": 0.5204498977505112,
+          "balanced_accuracy": 0.3965600787544761,
+          "dataset": "HF_Lung",
+          "delta_accuracy": 0.0015337423312883347,
+          "delta_balanced_accuracy": 0.012665201279377925,
+          "delta_macro_f1": 0.014332501236097972,
+          "evaluation": "official_test",
+          "macro_f1": 0.37740343916600205,
+          "record_count": 1956,
+          "task": "coarse"
+        }
+      ]
+    },
+    "tab:hear_opera_comparison": {
+      "label": "tab:hear_opera_comparison",
+      "rows": [
+        {
+          "accuracy": 0.7734806629834254,
+          "balanced_accuracy": 0.747573814341072,
+          "dataset": "BioCAS2022",
+          "evaluation": "test2022",
+          "macro_f1": 0.7465505464480875,
+          "method": "HeAR",
+          "record_count": 724,
+          "task": "binary"
+        },
+        {
+          "accuracy": 0.7375690607734806,
+          "balanced_accuracy": 0.6671067521689928,
+          "dataset": "BioCAS2022",
+          "evaluation": "test2022",
+          "macro_f1": 0.6767705249306828,
+          "method": "OPERA-CE",
+          "record_count": 724,
+          "task": "binary"
+        },
+        {
+          "accuracy": 0.7348066298342542,
+          "balanced_accuracy": 0.6948664311923459,
+          "dataset": "BioCAS2022",
+          "evaluation": "test2022",
+          "macro_f1": 0.6975851716486099,
+          "method": "OPERA-CT",
+          "record_count": 724,
+          "task": "binary"
+        },
+        {
+          "accuracy": 0.7348066298342542,
+          "balanced_accuracy": 0.7000102877130414,
+          "dataset": "BioCAS2022",
+          "evaluation": "test2022",
+          "macro_f1": 0.7008264462809918,
+          "method": "OPERA-GT",
+          "record_count": 724,
+          "task": "binary"
+        },
+        {
+          "accuracy": 0.7085635359116023,
+          "balanced_accuracy": 0.5024277658502267,
+          "dataset": "BioCAS2022",
+          "evaluation": "test2022",
+          "macro_f1": 0.5081634627881321,
+          "method": "HeAR",
+          "record_count": 724,
+          "task": "coarse"
+        },
+        {
+          "accuracy": 0.6464088397790055,
+          "balanced_accuracy": 0.37282243852414865,
+          "dataset": "BioCAS2022",
+          "evaluation": "test2022",
+          "macro_f1": 0.3681527486959627,
+          "method": "OPERA-CE",
+          "record_count": 724,
+          "task": "coarse"
+        },
+        {
+          "accuracy": 0.6395027624309392,
+          "balanced_accuracy": 0.3746863876677349,
+          "dataset": "BioCAS2022",
+          "evaluation": "test2022",
+          "macro_f1": 0.3775456039967114,
+          "method": "OPERA-CT",
+          "record_count": 724,
+          "task": "coarse"
+        },
+        {
+          "accuracy": 0.6464088397790055,
+          "balanced_accuracy": 0.3902214107962159,
+          "dataset": "BioCAS2022",
+          "evaluation": "test2022",
+          "macro_f1": 0.3958782897167489,
+          "method": "OPERA-GT",
+          "record_count": 724,
+          "task": "coarse"
+        },
+        {
+          "accuracy": 0.8019323671497585,
+          "balanced_accuracy": 0.7668179571293758,
+          "dataset": "BioCAS2023",
+          "evaluation": "test2023",
+          "macro_f1": 0.7746714456391877,
+          "method": "HeAR",
+          "record_count": 828,
+          "task": "binary"
+        },
+        {
+          "accuracy": 0.6727053140096618,
+          "balanced_accuracy": 0.6089804905919587,
+          "dataset": "BioCAS2023",
+          "evaluation": "test2023",
+          "macro_f1": 0.6122249008476554,
+          "method": "OPERA-CE",
+          "record_count": 828,
+          "task": "binary"
+        },
+        {
+          "accuracy": 0.6570048309178744,
+          "balanced_accuracy": 0.6282170622259599,
+          "dataset": "BioCAS2023",
+          "evaluation": "test2023",
+          "macro_f1": 0.6266764885185938,
+          "method": "OPERA-CT",
+          "record_count": 828,
+          "task": "binary"
+        },
+        {
+          "accuracy": 0.532608695652174,
+          "balanced_accuracy": 0.5944591740439491,
+          "dataset": "BioCAS2023",
+          "evaluation": "test2023",
+          "macro_f1": 0.5323078539808478,
+          "method": "OPERA-GT",
+          "record_count": 828,
+          "task": "binary"
+        },
+        {
+          "accuracy": 0.6871980676328503,
+          "balanced_accuracy": 0.4759798124459778,
+          "dataset": "BioCAS2023",
+          "evaluation": "test2023",
+          "macro_f1": 0.45781430999917694,
+          "method": "HeAR",
+          "record_count": 828,
+          "task": "coarse"
+        },
+        {
+          "accuracy": 0.4963768115942029,
+          "balanced_accuracy": 0.3375934424806605,
+          "dataset": "BioCAS2023",
+          "evaluation": "test2023",
+          "macro_f1": 0.28641542360469824,
+          "method": "OPERA-CE",
+          "record_count": 828,
+          "task": "coarse"
+        },
+        {
+          "accuracy": 0.36835748792270534,
+          "balanced_accuracy": 0.2880200139598636,
+          "dataset": "BioCAS2023",
+          "evaluation": "test2023",
+          "macro_f1": 0.24758162990528404,
+          "method": "OPERA-CT",
+          "record_count": 828,
+          "task": "coarse"
+        },
+        {
+          "accuracy": 0.3695652173913043,
+          "balanced_accuracy": 0.3542941046700445,
+          "dataset": "BioCAS2023",
+          "evaluation": "test2023",
+          "macro_f1": 0.2868517773420236,
+          "method": "OPERA-GT",
+          "record_count": 828,
+          "task": "coarse"
+        }
+      ]
+    },
+    "tab:hflung_class_distribution": {
+      "label": "tab:hflung_class_distribution",
+      "rows": [
+        {
+          "class": "Normal",
+          "count": 2810,
+          "split": "train",
+          "task": "binary"
+        },
+        {
+          "class": "Adventitious",
+          "count": 4999,
+          "split": "train",
+          "task": "binary"
+        },
+        {
+          "class": "Normal",
+          "count": 999,
+          "split": "test",
+          "task": "binary"
+        },
+        {
+          "class": "Adventitious",
+          "count": 957,
+          "split": "test",
+          "task": "binary"
+        },
+        {
+          "class": "Normal",
+          "count": 2810,
+          "split": "train",
+          "task": "coarse"
+        },
+        {
+          "class": "CAS only",
+          "count": 1923,
+          "split": "train",
+          "task": "coarse"
+        },
+        {
+          "class": "DAS only",
+          "count": 1961,
+          "split": "train",
+          "task": "coarse"
+        },
+        {
+          "class": "CAS and DAS",
+          "count": 1115,
+          "split": "train",
+          "task": "coarse"
+        },
+        {
+          "class": "Normal",
+          "count": 999,
+          "split": "test",
+          "task": "coarse"
+        },
+        {
+          "class": "CAS only",
+          "count": 589,
+          "split": "test",
+          "task": "coarse"
+        },
+        {
+          "class": "DAS only",
+          "count": 296,
+          "split": "test",
+          "task": "coarse"
+        },
+        {
+          "class": "CAS and DAS",
+          "count": 72,
+          "split": "test",
+          "task": "coarse"
+        }
+      ]
+    },
+    "tab:hflung_device_distribution": {
+      "label": "tab:hflung_device_distribution",
+      "rows": [
+        {
+          "count": 4555,
+          "device": "HF-Type-1",
+          "percentage": 58.330131899090794,
+          "split": "train"
+        },
+        {
+          "count": 3254,
+          "device": "Littmann 3200",
+          "percentage": 41.669868100909206,
+          "split": "train"
+        },
+        {
+          "count": 706,
+          "device": "HF-Type-1",
+          "percentage": 36.09406952965235,
+          "split": "test"
+        },
+        {
+          "count": 1250,
+          "device": "Littmann 3200",
+          "percentage": 63.90593047034765,
+          "split": "test"
+        }
+      ]
+    },
+    "tab:overall_harmonised_comparison": {
+      "label": "tab:overall_harmonised_comparison",
+      "rows": [
+        {
+          "dataset": "BioCAS2022",
+          "delta_accuracy": 0.1049723756906078,
+          "delta_balanced_accuracy": 0.11690271252700524,
+          "delta_macro_f1": 0.11670946596579013,
+          "dual_accuracy": 0.7734806629834254,
+          "dual_balanced_accuracy": 0.747573814341072,
+          "dual_macro_f1": 0.7465505464480875,
+          "evaluation": "test2022",
+          "single_accuracy": 0.6685082872928176,
+          "single_balanced_accuracy": 0.6306711018140667,
+          "single_macro_f1": 0.6298410804822974,
+          "task": "binary"
+        },
+        {
+          "dataset": "BioCAS2022",
+          "delta_accuracy": 0.15607734806629836,
+          "delta_balanced_accuracy": 0.1813004399288185,
+          "delta_macro_f1": 0.19545298337602546,
+          "dual_accuracy": 0.7085635359116023,
+          "dual_balanced_accuracy": 0.5024277658502267,
+          "dual_macro_f1": 0.5081634627881321,
+          "evaluation": "test2022",
+          "single_accuracy": 0.5524861878453039,
+          "single_balanced_accuracy": 0.32112732592140825,
+          "single_macro_f1": 0.3127104794121066,
+          "task": "coarse"
+        },
+        {
+          "dataset": "BioCAS2023",
+          "delta_accuracy": 0.0905797101449275,
+          "delta_balanced_accuracy": 0.12895532544568633,
+          "delta_macro_f1": 0.1310647223386976,
+          "dual_accuracy": 0.8019323671497585,
+          "dual_balanced_accuracy": 0.7668179571293758,
+          "dual_macro_f1": 0.7746714456391877,
+          "evaluation": "test2023",
+          "single_accuracy": 0.711352657004831,
+          "single_balanced_accuracy": 0.6378626316836895,
+          "single_macro_f1": 0.6436067233004901,
+          "task": "binary"
+        },
+        {
+          "dataset": "BioCAS2023",
+          "delta_accuracy": 0.07004830917874405,
+          "delta_balanced_accuracy": 0.08283551591822264,
+          "delta_macro_f1": 0.11395680354701782,
+          "dual_accuracy": 0.6871980676328503,
+          "dual_balanced_accuracy": 0.4759798124459778,
+          "dual_macro_f1": 0.45781430999917694,
+          "evaluation": "test2023",
+          "single_accuracy": 0.6171497584541062,
+          "single_balanced_accuracy": 0.3931442965277552,
+          "single_macro_f1": 0.3438575064521591,
+          "task": "coarse"
+        },
+        {
+          "dataset": "HF_Lung",
+          "delta_accuracy": 0.019938650306748462,
+          "delta_balanced_accuracy": 0.01879465672569114,
+          "delta_macro_f1": 0.020367509820548024,
+          "dual_accuracy": 0.6441717791411042,
+          "dual_balanced_accuracy": 0.6441174717036786,
+          "dual_macro_f1": 0.6440765173159538,
+          "evaluation": "official_test",
+          "single_accuracy": 0.6242331288343558,
+          "single_balanced_accuracy": 0.6253228149779875,
+          "single_macro_f1": 0.6237090074954058,
+          "task": "binary"
+        },
+        {
+          "dataset": "HF_Lung",
+          "delta_accuracy": 0.05674846625766866,
+          "delta_balanced_accuracy": 0.05393636420801107,
+          "delta_macro_f1": 0.04945006371386934,
+          "dual_accuracy": 0.5204498977505112,
+          "dual_balanced_accuracy": 0.3965600787544761,
+          "dual_macro_f1": 0.37740343916600205,
+          "evaluation": "official_test",
+          "single_accuracy": 0.46370143149284254,
+          "single_balanced_accuracy": 0.342623714546465,
+          "single_macro_f1": 0.3279533754521327,
+          "task": "coarse"
+        }
+      ]
+    },
+    "tab:single_window_event_capture": {
+      "label": "tab:single_window_event_capture",
+      "rows": [
+        {
+          "capture_rate_percent": 77.32497387669801,
+          "captured_records": 740,
+          "dataset": "HF_Lung_V1",
+          "pathological_records": 957
+        },
+        {
+          "capture_rate_percent": 41.735537190082646,
+          "captured_records": 101,
+          "dataset": "SPRSound2022",
+          "pathological_records": 242
+        },
+        {
+          "capture_rate_percent": 50.51903114186851,
+          "captured_records": 146,
+          "dataset": "SPRSound2023",
+          "pathological_records": 289
+        }
+      ]
+    },
+    "tab:single_window_per_class_recall": {
+      "label": "tab:single_window_per_class_recall",
+      "rows": [
+        {
+          "class": "Normal",
+          "dataset": "BioCAS2022",
+          "evaluation": "test2022",
+          "recall": 0.7448132780082988,
+          "task": "binary"
+        },
+        {
+          "class": "Adventitious",
+          "dataset": "BioCAS2022",
+          "evaluation": "test2022",
+          "recall": 0.5165289256198347,
+          "task": "binary"
+        },
+        {
+          "class": "Normal",
+          "dataset": "BioCAS2022",
+          "evaluation": "test2022",
+          "recall": 0.7448132780082988,
+          "task": "coarse"
+        },
+        {
+          "class": "CAS only",
+          "dataset": "BioCAS2022",
+          "evaluation": "test2022",
+          "recall": 0.19626168224299065,
+          "task": "coarse"
+        },
+        {
+          "class": "DAS only",
+          "dataset": "BioCAS2022",
+          "evaluation": "test2022",
+          "recall": 0.12121212121212122,
+          "task": "coarse"
+        },
+        {
+          "class": "CAS and DAS",
+          "dataset": "BioCAS2022",
+          "evaluation": "test2022",
+          "recall": 0.2222222222222222,
+          "task": "coarse"
+        },
+        {
+          "class": "Normal",
+          "dataset": "BioCAS2023",
+          "evaluation": "test2023",
+          "recall": 0.8812615955473099,
+          "task": "binary"
+        },
+        {
+          "class": "Adventitious",
+          "dataset": "BioCAS2023",
+          "evaluation": "test2023",
+          "recall": 0.3944636678200692,
+          "task": "binary"
+        },
+        {
+          "class": "Normal",
+          "dataset": "BioCAS2023",
+          "evaluation": "test2023",
+          "recall": 0.8608534322820037,
+          "task": "coarse"
+        },
+        {
+          "class": "CAS only",
+          "dataset": "BioCAS2023",
+          "evaluation": "test2023",
+          "recall": 0.17037037037037037,
+          "task": "coarse"
+        },
+        {
+          "class": "DAS only",
+          "dataset": "BioCAS2023",
+          "evaluation": "test2023",
+          "recall": 0.11278195488721804,
+          "task": "coarse"
+        },
+        {
+          "class": "CAS and DAS",
+          "dataset": "BioCAS2023",
+          "evaluation": "test2023",
+          "recall": 0.42857142857142855,
+          "task": "coarse"
+        },
+        {
+          "class": "Normal",
+          "dataset": "HF_Lung",
+          "evaluation": "official_test",
+          "recall": 0.5745745745745746,
+          "task": "binary"
+        },
+        {
+          "class": "Adventitious",
+          "dataset": "HF_Lung",
+          "evaluation": "official_test",
+          "recall": 0.6760710553814002,
+          "task": "binary"
+        },
+        {
+          "class": "Normal",
+          "dataset": "HF_Lung",
+          "evaluation": "official_test",
+          "recall": 0.6846846846846847,
+          "task": "coarse"
+        },
+        {
+          "class": "CAS only",
+          "dataset": "HF_Lung",
+          "evaluation": "official_test",
+          "recall": 0.18505942275042445,
+          "task": "coarse"
+        },
+        {
+          "class": "DAS only",
+          "dataset": "HF_Lung",
+          "evaluation": "official_test",
+          "recall": 0.34797297297297297,
+          "task": "coarse"
+        },
+        {
+          "class": "CAS and DAS",
+          "dataset": "HF_Lung",
+          "evaluation": "official_test",
+          "recall": 0.1527777777777778,
+          "task": "coarse"
+        }
+      ]
+    },
+    "tab:single_window_results": {
+      "label": "tab:single_window_results",
+      "rows": [
+        {
+          "accuracy": 0.6685082872928176,
+          "balanced_accuracy": 0.6306711018140667,
+          "dataset": "BioCAS2022",
+          "evaluation": "test2022",
+          "macro_f1": 0.6298410804822974,
+          "record_count": 724,
+          "task": "binary"
+        },
+        {
+          "accuracy": 0.5524861878453039,
+          "balanced_accuracy": 0.32112732592140825,
+          "dataset": "BioCAS2022",
+          "evaluation": "test2022",
+          "macro_f1": 0.3127104794121066,
+          "record_count": 724,
+          "task": "coarse"
+        },
+        {
+          "accuracy": 0.711352657004831,
+          "balanced_accuracy": 0.6378626316836895,
+          "dataset": "BioCAS2023",
+          "evaluation": "test2023",
+          "macro_f1": 0.6436067233004901,
+          "record_count": 828,
+          "task": "binary"
+        },
+        {
+          "accuracy": 0.6171497584541062,
+          "balanced_accuracy": 0.3931442965277552,
+          "dataset": "BioCAS2023",
+          "evaluation": "test2023",
+          "macro_f1": 0.3438575064521591,
+          "record_count": 828,
+          "task": "coarse"
+        },
+        {
+          "accuracy": 0.6242331288343558,
+          "balanced_accuracy": 0.6253228149779875,
+          "dataset": "HF_Lung",
+          "evaluation": "official_test",
+          "macro_f1": 0.6237090074954058,
+          "record_count": 1956,
+          "task": "binary"
+        },
+        {
+          "accuracy": 0.46370143149284254,
+          "balanced_accuracy": 0.342623714546465,
+          "dataset": "HF_Lung",
+          "evaluation": "official_test",
+          "macro_f1": 0.3279533754521327,
+          "record_count": 1956,
+          "task": "coarse"
+        }
+      ]
+    }
+  }
+}

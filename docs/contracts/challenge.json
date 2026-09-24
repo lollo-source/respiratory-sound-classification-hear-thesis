@@ -1,0 +1,16 @@
+{
+  "schema": "official_biocas_challenge_full_reproduction_v1",
+  "records": {"total": 3554, "train2022": 1949, "test_inter": 355, "test_intra": 379, "test2023": 871},
+  "tasks": {
+    "T2-1": {"classes": ["Normal", "Adventitious", "Poor Quality"], "sensitivity_classes": ["Adventitious"]},
+    "T2-2": {"classes": ["Normal", "CAS", "DAS", "CAS & DAS", "Poor Quality"], "sensitivity_classes": ["CAS", "DAS", "CAS & DAS"]}
+  },
+  "cross_validation": {"splitter": "StratifiedGroupKFold", "folds": 5, "shuffle": true, "random_state": 42, "group": "release-local patient_group", "training_only": true},
+  "audio": {"sample_rate": 16000, "window_samples": 32000, "overlap": 0, "last_window": "right-zero-pad", "order": "record-major", "batch_size": 32},
+  "hear": {"model": "google/hear-pytorch", "revision": "f791cd42437c3e268c8ac84707e3508900f65f1a", "same_forward_cls_tg": true, "weights_sha256": "d44d355816ee4315f67d7810da274409e9b1a6570325fc5ba9ae27555fd81723", "preprocessing_sha256": "1f2dcc0406e86d1162c97c91782e8488f290b9f41006d7f5fd5035bbf4c88957"},
+  "cls": {"window_representation": "pooler_output", "dimension": 512, "aggregation": "positive-distance SDP", "selection_arithmetic": "float32 mean/distance and float64 softmax weights", "final_arithmetic": "float64 values/mean/distance/weights then float32 output", "temperature_grid": [1, 2, 5, 10, 20, 50, 100], "replacement_rule": "candidate mean Score > incumbent mean Score + 1e-4"},
+  "temporal_grid": {"window_dimension": 24576, "record_aggregation": "dimension-wise q75", "quantile_method": "NumPy linear"},
+  "classifier": {"pipeline": ["StandardScaler", "LogisticRegression"], "C": 1.0, "penalty": "l2", "solver": "lbfgs", "max_iter": 5000, "class_weight": null},
+  "fusion": {"alpha_cls": 0.5, "selection": "fixed protocol parameter"},
+  "score": {"components": ["SE", "SP", "AS", "HS", "Score"], "poor_quality": "fitted class excluded from SE/SP truth denominators"}
+}

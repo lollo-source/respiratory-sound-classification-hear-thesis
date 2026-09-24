@@ -1,0 +1,12 @@
+{
+  "status": "ADOPTED_THESIS_RELEASE",
+  "adopted_payload": "shared_forward_fixed_alpha_candidate_v1_20260919",
+  "release_manifest_sha256": "48d91aa3a5853c5b6ac732d87a7e6daae9d6cfaf3adba1a13ea51b0481c103dc",
+  "artifact_inventory_sha256": "b0fade9095f304245ffb790a04ee48d68abc7dcf5d1df90bd1916d678ab00f09",
+  "shared_hear_forward": true,
+  "cls_aggregation": "SDP",
+  "temperature": {"T2-1": 100, "T2-2": 50},
+  "temporal_grid_aggregation": "dimension-wise q75 with NumPy linear interpolation",
+  "alpha_cls": {"T2-1": 0.5, "T2-2": 0.5},
+  "authority_note": "This release-level adoption supersedes the sealed payload's historical candidate wording without modifying the sealed scientific artifacts."
+}

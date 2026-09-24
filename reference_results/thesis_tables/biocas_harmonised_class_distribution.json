@@ -1,0 +1,113 @@
+{
+  "label": "tab:biocas_harmonised_class_distribution",
+  "rows": [
+    {
+      "class": "Normal",
+      "count": 1303,
+      "split": "train2022",
+      "task": "binary"
+    },
+    {
+      "class": "Adventitious",
+      "count": 468,
+      "split": "train2022",
+      "task": "binary"
+    },
+    {
+      "class": "Normal",
+      "count": 482,
+      "split": "test2022",
+      "task": "binary"
+    },
+    {
+      "class": "Adventitious",
+      "count": 242,
+      "split": "test2022",
+      "task": "binary"
+    },
+    {
+      "class": "Normal",
+      "count": 539,
+      "split": "test2023",
+      "task": "binary"
+    },
+    {
+      "class": "Adventitious",
+      "count": 289,
+      "split": "test2023",
+      "task": "binary"
+    },
+    {
+      "class": "Normal",
+      "count": 1303,
+      "split": "train2022",
+      "task": "coarse"
+    },
+    {
+      "class": "CAS only",
+      "count": 126,
+      "split": "train2022",
+      "task": "coarse"
+    },
+    {
+      "class": "DAS only",
+      "count": 247,
+      "split": "train2022",
+      "task": "coarse"
+    },
+    {
+      "class": "CAS and DAS",
+      "count": 95,
+      "split": "train2022",
+      "task": "coarse"
+    },
+    {
+      "class": "Normal",
+      "count": 482,
+      "split": "test2022",
+      "task": "coarse"
+    },
+    {
+      "class": "CAS only",
+      "count": 107,
+      "split": "test2022",
+      "task": "coarse"
+    },
+    {
+      "class": "DAS only",
+      "count": 99,
+      "split": "test2022",
+      "task": "coarse"
+    },
+    {
+      "class": "CAS and DAS",
+      "count": 36,
+      "split": "test2022",
+      "task": "coarse"
+    },
+    {
+      "class": "Normal",
+      "count": 539,
+      "split": "test2023",
+      "task": "coarse"
+    },
+    {
+      "class": "CAS only",
+      "count": 135,
+      "split": "test2023",
+      "task": "coarse"
+    },
+    {
+      "class": "DAS only",
+      "count": 133,
+      "split": "test2023",
+      "task": "coarse"
+    },
+    {
+      "class": "CAS and DAS",
+      "count": 21,
+      "split": "test2023",
+      "task": "coarse"
+    }
+  ]
+}

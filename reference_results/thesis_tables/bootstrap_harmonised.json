@@ -1,0 +1,113 @@
+{
+  "label": "tab:bootstrap_harmonised",
+  "rows": [
+    {
+      "ci_lower": 0.5744663425497639,
+      "ci_upper": 0.6801704186949368,
+      "method": "Single Window",
+      "metric": "balanced_accuracy",
+      "point_estimate": 0.6306711018140667,
+      "replicates": 10000,
+      "task": "binary"
+    },
+    {
+      "ci_lower": 0.5718173529735889,
+      "ci_upper": 0.6788562316017874,
+      "method": "Single Window",
+      "metric": "macro_f1",
+      "point_estimate": 0.6298410804822974,
+      "replicates": 10000,
+      "task": "binary"
+    },
+    {
+      "ci_lower": 0.6974885509893795,
+      "ci_upper": 0.7907161813562891,
+      "method": "Dual Readout",
+      "metric": "balanced_accuracy",
+      "point_estimate": 0.747573814341072,
+      "replicates": 10000,
+      "task": "binary"
+    },
+    {
+      "ci_lower": 0.6951190543424881,
+      "ci_upper": 0.7894429038536943,
+      "method": "Dual Readout",
+      "metric": "macro_f1",
+      "point_estimate": 0.7465505464480875,
+      "replicates": 10000,
+      "task": "binary"
+    },
+    {
+      "ci_lower": 0.07820194532039808,
+      "ci_upper": 0.15728283507775337,
+      "method": "Dual Readout - Single Window",
+      "metric": "balanced_accuracy",
+      "point_estimate": 0.11690271252700524,
+      "replicates": 10000,
+      "task": "binary"
+    },
+    {
+      "ci_lower": 0.07673483189988822,
+      "ci_upper": 0.15820455568678646,
+      "method": "Dual Readout - Single Window",
+      "metric": "macro_f1",
+      "point_estimate": 0.11670946596579013,
+      "replicates": 10000,
+      "task": "binary"
+    },
+    {
+      "ci_lower": 0.2700459533814003,
+      "ci_upper": 0.35960933236053966,
+      "method": "Single Window",
+      "metric": "balanced_accuracy",
+      "point_estimate": 0.32112732592140825,
+      "replicates": 10000,
+      "task": "coarse"
+    },
+    {
+      "ci_lower": 0.26878221099363764,
+      "ci_upper": 0.3501521263041913,
+      "method": "Single Window",
+      "metric": "macro_f1",
+      "point_estimate": 0.3127104794121066,
+      "replicates": 10000,
+      "task": "coarse"
+    },
+    {
+      "ci_lower": 0.4109438924338431,
+      "ci_upper": 0.5713947829660959,
+      "method": "Dual Readout",
+      "metric": "balanced_accuracy",
+      "point_estimate": 0.5024277658502267,
+      "replicates": 10000,
+      "task": "coarse"
+    },
+    {
+      "ci_lower": 0.42227932748228,
+      "ci_upper": 0.5775770334095428,
+      "method": "Dual Readout",
+      "metric": "macro_f1",
+      "point_estimate": 0.5081634627881321,
+      "replicates": 10000,
+      "task": "coarse"
+    },
+    {
+      "ci_lower": 0.10432813775544184,
+      "ci_upper": 0.24370435921729808,
+      "method": "Dual Readout - Single Window",
+      "metric": "balanced_accuracy",
+      "point_estimate": 0.1813004399288185,
+      "replicates": 10000,
+      "task": "coarse"
+    },
+    {
+      "ci_lower": 0.12404811253249215,
+      "ci_upper": 0.25723612604649854,
+      "method": "Dual Readout - Single Window",
+      "metric": "macro_f1",
+      "point_estimate": 0.19545298337602546,
+      "replicates": 10000,
+      "task": "coarse"
+    }
+  ]
+}

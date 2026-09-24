@@ -1,0 +1,165 @@
+{
+  "label": "tab:hear_opera_comparison",
+  "rows": [
+    {
+      "accuracy": 0.7734806629834254,
+      "balanced_accuracy": 0.747573814341072,
+      "dataset": "BioCAS2022",
+      "evaluation": "test2022",
+      "macro_f1": 0.7465505464480875,
+      "method": "HeAR",
+      "record_count": 724,
+      "task": "binary"
+    },
+    {
+      "accuracy": 0.7375690607734806,
+      "balanced_accuracy": 0.6671067521689928,
+      "dataset": "BioCAS2022",
+      "evaluation": "test2022",
+      "macro_f1": 0.6767705249306828,
+      "method": "OPERA-CE",
+      "record_count": 724,
+      "task": "binary"
+    },
+    {
+      "accuracy": 0.7348066298342542,
+      "balanced_accuracy": 0.6948664311923459,
+      "dataset": "BioCAS2022",
+      "evaluation": "test2022",
+      "macro_f1": 0.6975851716486099,
+      "method": "OPERA-CT",
+      "record_count": 724,
+      "task": "binary"
+    },
+    {
+      "accuracy": 0.7348066298342542,
+      "balanced_accuracy": 0.7000102877130414,
+      "dataset": "BioCAS2022",
+      "evaluation": "test2022",
+      "macro_f1": 0.7008264462809918,
+      "method": "OPERA-GT",
+      "record_count": 724,
+      "task": "binary"
+    },
+    {
+      "accuracy": 0.7085635359116023,
+      "balanced_accuracy": 0.5024277658502267,
+      "dataset": "BioCAS2022",
+      "evaluation": "test2022",
+      "macro_f1": 0.5081634627881321,
+      "method": "HeAR",
+      "record_count": 724,
+      "task": "coarse"
+    },
+    {
+      "accuracy": 0.6464088397790055,
+      "balanced_accuracy": 0.37282243852414865,
+      "dataset": "BioCAS2022",
+      "evaluation": "test2022",
+      "macro_f1": 0.3681527486959627,
+      "method": "OPERA-CE",
+      "record_count": 724,
+      "task": "coarse"
+    },
+    {
+      "accuracy": 0.6395027624309392,
+      "balanced_accuracy": 0.3746863876677349,
+      "dataset": "BioCAS2022",
+      "evaluation": "test2022",
+      "macro_f1": 0.3775456039967114,
+      "method": "OPERA-CT",
+      "record_count": 724,
+      "task": "coarse"
+    },
+    {
+      "accuracy": 0.6464088397790055,
+      "balanced_accuracy": 0.3902214107962159,
+      "dataset": "BioCAS2022",
+      "evaluation": "test2022",
+      "macro_f1": 0.3958782897167489,
+      "method": "OPERA-GT",
+      "record_count": 724,
+      "task": "coarse"
+    },
+    {
+      "accuracy": 0.8019323671497585,
+      "balanced_accuracy": 0.7668179571293758,
+      "dataset": "BioCAS2023",
+      "evaluation": "test2023",
+      "macro_f1": 0.7746714456391877,
+      "method": "HeAR",
+      "record_count": 828,
+      "task": "binary"
+    },
+    {
+      "accuracy": 0.6727053140096618,
+      "balanced_accuracy": 0.6089804905919587,
+      "dataset": "BioCAS2023",
+      "evaluation": "test2023",
+      "macro_f1": 0.6122249008476554,
+      "method": "OPERA-CE",
+      "record_count": 828,
+      "task": "binary"
+    },
+    {
+      "accuracy": 0.6570048309178744,
+      "balanced_accuracy": 0.6282170622259599,
+      "dataset": "BioCAS2023",
+      "evaluation": "test2023",
+      "macro_f1": 0.6266764885185938,
+      "method": "OPERA-CT",
+      "record_count": 828,
+      "task": "binary"
+    },
+    {
+      "accuracy": 0.532608695652174,
+      "balanced_accuracy": 0.5944591740439491,
+      "dataset": "BioCAS2023",
+      "evaluation": "test2023",
+      "macro_f1": 0.5323078539808478,
+      "method": "OPERA-GT",
+      "record_count": 828,
+      "task": "binary"
+    },
+    {
+      "accuracy": 0.6871980676328503,
+      "balanced_accuracy": 0.4759798124459778,
+      "dataset": "BioCAS2023",
+      "evaluation": "test2023",
+      "macro_f1": 0.45781430999917694,
+      "method": "HeAR",
+      "record_count": 828,
+      "task": "coarse"
+    },
+    {
+      "accuracy": 0.4963768115942029,
+      "balanced_accuracy": 0.3375934424806605,
+      "dataset": "BioCAS2023",
+      "evaluation": "test2023",
+      "macro_f1": 0.28641542360469824,
+      "method": "OPERA-CE",
+      "record_count": 828,
+      "task": "coarse"
+    },
+    {
+      "accuracy": 0.36835748792270534,
+      "balanced_accuracy": 0.2880200139598636,
+      "dataset": "BioCAS2023",
+      "evaluation": "test2023",
+      "macro_f1": 0.24758162990528404,
+      "method": "OPERA-CT",
+      "record_count": 828,
+      "task": "coarse"
+    },
+    {
+      "accuracy": 0.3695652173913043,
+      "balanced_accuracy": 0.3542941046700445,
+      "dataset": "BioCAS2023",
+      "evaluation": "test2023",
+      "macro_f1": 0.2868517773420236,
+      "method": "OPERA-GT",
+      "record_count": 828,
+      "task": "coarse"
+    }
+  ]
+}

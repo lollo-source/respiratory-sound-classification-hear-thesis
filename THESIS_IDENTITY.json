@@ -1,0 +1,23 @@
+{
+  "title": "Respiratory Sound Classification with HeAR: Full Recording Feature Aggregation and Prediction Fusion from Multiple Encoder Readouts",
+  "author": "Lorenzo Bianco",
+  "student_id": "270592",
+  "degree_program": "Music and Acoustic Engineering",
+  "institution": "Politecnico di Milano",
+  "academic_year": "2025-2026",
+  "advisor": "Mirco Pezzoli",
+  "coadvisors": ["Alice Marazzi", "Federico Miotello"],
+  "manuscript_sha256": "f89b6b8ecc40acca965b018183863dc9b6f2fe0e71b3e038f2f2cdb3e258cbd7",
+  "audit_date": "2026-09-22",
+  "release_version": "github-release-final-v1",
+  "github_release_status": "assembled_locally_not_pushed",
+  "hear_revision": "f791cd42437c3e268c8ac84707e3508900f65f1a",
+  "opera_revision": "3622310e667afb8aa40169050b4dd45de75946a2",
+  "challenge_package": "shared_forward_fixed_alpha_candidate_v1_20260919",
+  "challenge_package_release_manifest_sha256": "48d91aa3a5853c5b6ac732d87a7e6daae9d6cfaf3adba1a13ea51b0481c103dc",
+  "challenge_artifact_inventory_sha256": "b0fade9095f304245ffb790a04ee48d68abc7dcf5d1df90bd1916d678ab00f09",
+  "hf_lung_protocol": "hf_lung_v1_protocol_v1",
+  "biocas_protocol": "biocas_harmonized_protocol_v2",
+  "reproduction_levels": {"C": "implemented_and_verified", "B": "interface_prepared_not_verified", "A": "interface_prepared_not_verified"},
+  "thesis_table_labels": ["tab:hflung_class_distribution", "tab:hflung_device_distribution", "tab:biocas_harmonised_class_distribution", "tab:biocas_challenge_class_distribution", "tab:single_window_results", "tab:single_window_per_class_recall", "tab:single_window_event_capture", "tab:complete_record_results", "tab:complete_record_per_class_recall", "tab:dual_readout_results", "tab:dual_readout_per_class_recall", "tab:overall_harmonised_comparison", "tab:hear_opera_comparison", "tab:biocas_challenge_placements", "tab:challenge_readout_comparison", "tab:bootstrap_harmonised", "tab:bootstrap_challenge_readouts"]
+}

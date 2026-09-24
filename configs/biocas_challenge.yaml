@@ -1,0 +1,9 @@
+{
+  "authority": "FINAL_CHALLENGE_CONFIGURATION.json",
+  "protocol": "official_biocas_task2_poor_quality_retained",
+  "encoder": {"name": "google/hear-pytorch", "revision": "f791cd42437c3e268c8ac84707e3508900f65f1a", "shared_forward": true},
+  "cls": {"aggregation": "SDP", "temperature": {"T2-1": 100, "T2-2": 50}},
+  "temporal_grid": {"aggregation": "dimension_wise_q75", "quantile_interpolation": "numpy_linear"},
+  "fusion": {"alpha_cls": {"T2-1": 0.5, "T2-2": 0.5}},
+  "classes": {"T2-1": ["Normal", "Adventitious", "Poor Quality"], "T2-2": ["Normal", "CAS", "DAS", "CAS & DAS", "Poor Quality"]}
+}

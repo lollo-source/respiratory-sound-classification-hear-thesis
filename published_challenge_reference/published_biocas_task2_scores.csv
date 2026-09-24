@@ -1,0 +1,37 @@
+source_pdf_sha256,year,table,scope,evaluation,task,team,score
+a393b0312b3ce762a15b1eec70627f97ce5d594e0594de9963ef6411c133641e,2022,Table II,published top 10 by task,biocas2022,T2-1,NIIT,0.7179
+a393b0312b3ce762a15b1eec70627f97ce5d594e0594de9963ef6411c133641e,2022,Table II,published top 10 by task,biocas2022,T2-1,ECE UofT,0.7151
+a393b0312b3ce762a15b1eec70627f97ce5d594e0594de9963ef6411c133641e,2022,Table II,published top 10 by task,biocas2022,T2-1,The Superego,0.7114
+a393b0312b3ce762a15b1eec70627f97ce5d594e0594de9963ef6411c133641e,2022,Table II,published top 10 by task,biocas2022,T2-1,IESOC A,0.7013
+a393b0312b3ce762a15b1eec70627f97ce5d594e0594de9963ef6411c133641e,2022,Table II,published top 10 by task,biocas2022,T2-1,INTJ,0.6850
+a393b0312b3ce762a15b1eec70627f97ce5d594e0594de9963ef6411c133641e,2022,Table II,published top 10 by task,biocas2022,T2-1,Naseem Babu,0.6696
+a393b0312b3ce762a15b1eec70627f97ce5d594e0594de9963ef6411c133641e,2022,Table II,published top 10 by task,biocas2022,T2-1,WELMO-Team,0.6611
+a393b0312b3ce762a15b1eec70627f97ce5d594e0594de9963ef6411c133641e,2022,Table II,published top 10 by task,biocas2022,T2-1,UCD,0.6302
+a393b0312b3ce762a15b1eec70627f97ce5d594e0594de9963ef6411c133641e,2022,Table II,published top 10 by task,biocas2022,T2-1,SVNIT,0.6086
+a393b0312b3ce762a15b1eec70627f97ce5d594e0594de9963ef6411c133641e,2022,Table II,published top 10 by task,biocas2022,T2-1,UofT,0.5262
+a393b0312b3ce762a15b1eec70627f97ce5d594e0594de9963ef6411c133641e,2022,Table II,published top 10 by task,biocas2022,T2-2,WELMO-Team,0.5543
+a393b0312b3ce762a15b1eec70627f97ce5d594e0594de9963ef6411c133641e,2022,Table II,published top 10 by task,biocas2022,T2-2,NIIT,0.5331
+a393b0312b3ce762a15b1eec70627f97ce5d594e0594de9963ef6411c133641e,2022,Table II,published top 10 by task,biocas2022,T2-2,The Superego,0.5314
+a393b0312b3ce762a15b1eec70627f97ce5d594e0594de9963ef6411c133641e,2022,Table II,published top 10 by task,biocas2022,T2-2,IESOC A,0.5285
+a393b0312b3ce762a15b1eec70627f97ce5d594e0594de9963ef6411c133641e,2022,Table II,published top 10 by task,biocas2022,T2-2,Naseem Babu,0.5176
+a393b0312b3ce762a15b1eec70627f97ce5d594e0594de9963ef6411c133641e,2022,Table II,published top 10 by task,biocas2022,T2-2,INTJ,0.4853
+a393b0312b3ce762a15b1eec70627f97ce5d594e0594de9963ef6411c133641e,2022,Table II,published top 10 by task,biocas2022,T2-2,UCD,0.4593
+a393b0312b3ce762a15b1eec70627f97ce5d594e0594de9963ef6411c133641e,2022,Table II,published top 10 by task,biocas2022,T2-2,ECE UofT,0.4543
+a393b0312b3ce762a15b1eec70627f97ce5d594e0594de9963ef6411c133641e,2022,Table II,published top 10 by task,biocas2022,T2-2,SVNIT,0.4457
+a393b0312b3ce762a15b1eec70627f97ce5d594e0594de9963ef6411c133641e,2022,Table II,published top 10 by task,biocas2022,T2-2,UofT,0.3698
+f20a4b2a7c42a1e53a282c7bf68158d2cbe6c74186f651e6c91ea8c6a56d59bc,2023,Table II,BioCAS2022 systems evaluated on BioCAS2023,biocas2023,T2-1,NIIT,0.5471
+f20a4b2a7c42a1e53a282c7bf68158d2cbe6c74186f651e6c91ea8c6a56d59bc,2023,Table II,BioCAS2022 systems evaluated on BioCAS2023,biocas2023,T2-1,The Superego,0.7228
+f20a4b2a7c42a1e53a282c7bf68158d2cbe6c74186f651e6c91ea8c6a56d59bc,2023,Table II,BioCAS2022 systems evaluated on BioCAS2023,biocas2023,T2-1,IESOC A,0.7587
+f20a4b2a7c42a1e53a282c7bf68158d2cbe6c74186f651e6c91ea8c6a56d59bc,2023,Table II,BioCAS2022 systems evaluated on BioCAS2023,biocas2023,T2-1,ECE UofT,0.6986
+f20a4b2a7c42a1e53a282c7bf68158d2cbe6c74186f651e6c91ea8c6a56d59bc,2023,Table II,BioCAS2022 systems evaluated on BioCAS2023,biocas2023,T2-1,Naseem Babu,0.6653
+f20a4b2a7c42a1e53a282c7bf68158d2cbe6c74186f651e6c91ea8c6a56d59bc,2023,Table II,BioCAS2022 systems evaluated on BioCAS2023,biocas2023,T2-2,NIIT,0.4167
+f20a4b2a7c42a1e53a282c7bf68158d2cbe6c74186f651e6c91ea8c6a56d59bc,2023,Table II,BioCAS2022 systems evaluated on BioCAS2023,biocas2023,T2-2,The Superego,0.5241
+f20a4b2a7c42a1e53a282c7bf68158d2cbe6c74186f651e6c91ea8c6a56d59bc,2023,Table II,BioCAS2022 systems evaluated on BioCAS2023,biocas2023,T2-2,IESOC A,0.5384
+f20a4b2a7c42a1e53a282c7bf68158d2cbe6c74186f651e6c91ea8c6a56d59bc,2023,Table II,BioCAS2022 systems evaluated on BioCAS2023,biocas2023,T2-2,ECE UofT,0.4109
+f20a4b2a7c42a1e53a282c7bf68158d2cbe6c74186f651e6c91ea8c6a56d59bc,2023,Table II,BioCAS2022 systems evaluated on BioCAS2023,biocas2023,T2-2,Naseem Babu,0.5494
+f20a4b2a7c42a1e53a282c7bf68158d2cbe6c74186f651e6c91ea8c6a56d59bc,2023,Table III,top 3 BioCAS2023 systems,biocas2023,T2-1,Bio ICDS,0.6615
+f20a4b2a7c42a1e53a282c7bf68158d2cbe6c74186f651e6c91ea8c6a56d59bc,2023,Table III,top 3 BioCAS2023 systems,biocas2023,T2-1,UoE AIT,0.7443
+f20a4b2a7c42a1e53a282c7bf68158d2cbe6c74186f651e6c91ea8c6a56d59bc,2023,Table III,top 3 BioCAS2023 systems,biocas2023,T2-1,CoCross,0.6581
+f20a4b2a7c42a1e53a282c7bf68158d2cbe6c74186f651e6c91ea8c6a56d59bc,2023,Table III,top 3 BioCAS2023 systems,biocas2023,T2-2,Bio ICDS,0.5121
+f20a4b2a7c42a1e53a282c7bf68158d2cbe6c74186f651e6c91ea8c6a56d59bc,2023,Table III,top 3 BioCAS2023 systems,biocas2023,T2-2,UoE AIT,0.6079
+f20a4b2a7c42a1e53a282c7bf68158d2cbe6c74186f651e6c91ea8c6a56d59bc,2023,Table III,top 3 BioCAS2023 systems,biocas2023,T2-2,CoCross,0.4583

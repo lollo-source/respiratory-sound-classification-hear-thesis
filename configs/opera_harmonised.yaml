@@ -1,0 +1,7 @@
+{
+  "protocol": "biocas_harmonized_protocol_v2",
+  "revision": "3622310e667afb8aa40169050b4dd45de75946a2",
+  "models": {"OPERA-CE": {"dimension": 1280}, "OPERA-CT": {"dimension": 768}, "OPERA-GT": {"dimension": 384}},
+  "native_input_seconds": 8,
+  "downstream": {"scaler": "StandardScaler", "classifier": "LogisticRegression", "penalty": "l2", "solver": "lbfgs", "C": 1.0, "max_iter": 5000, "class_weight": null}
+}

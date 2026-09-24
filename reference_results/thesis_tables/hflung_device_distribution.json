@@ -1,0 +1,29 @@
+{
+  "label": "tab:hflung_device_distribution",
+  "rows": [
+    {
+      "count": 4555,
+      "device": "HF-Type-1",
+      "percentage": 58.330131899090794,
+      "split": "train"
+    },
+    {
+      "count": 3254,
+      "device": "Littmann 3200",
+      "percentage": 41.669868100909206,
+      "split": "train"
+    },
+    {
+      "count": 706,
+      "device": "HF-Type-1",
+      "percentage": 36.09406952965235,
+      "split": "test"
+    },
+    {
+      "count": 1250,
+      "device": "Littmann 3200",
+      "percentage": 63.90593047034765,
+      "split": "test"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "label": "tab:biocas_challenge_class_distribution",
+  "rows": [
+    {
+      "class": "Normal",
+      "count": 1303,
+      "split": "train2022",
+      "task": "T2-1"
+    },
+    {
+      "class": "Adventitious",
+      "count": 469,
+      "split": "train2022",
+      "task": "T2-1"
+    },
+    {
+      "class": "Poor Quality",
+      "count": 177,
+      "split": "train2022",
+      "task": "T2-1"
+    },
+    {
+      "class": "Normal",
+      "count": 482,
+      "split": "test2022",
+      "task": "T2-1"
+    },
+    {
+      "class": "Adventitious",
+      "count": 242,
+      "split": "test2022",
+      "task": "T2-1"
+    },
+    {
+      "class": "Poor Quality",
+      "count": 10,
+      "split": "test2022",
+      "task": "T2-1"
+    },
+    {
+      "class": "Normal",
+      "count": 539,
+      "split": "test2023",
+      "task": "T2-1"
+    },
+    {
+      "class": "Adventitious",
+      "count": 289,
+      "split": "test2023",
+      "task": "T2-1"
+    },
+    {
+      "class": "Poor Quality",
+      "count": 43,
+      "split": "test2023",
+      "task": "T2-1"
+    },
+    {
+      "class": "Normal",
+      "count": 1303,
+      "split": "train2022",
+      "task": "T2-2"
+    },
+    {
+      "class": "CAS",
+      "count": 126,
+      "split": "train2022",
+      "task": "T2-2"
+    },
+    {
+      "class": "DAS",
+      "count": 248,
+      "split": "train2022",
+      "task": "T2-2"
+    },
+    {
+      "class": "CAS & DAS",
+      "count": 95,
+      "split": "train2022",
+      "task": "T2-2"
+    },
+    {
+      "class": "Poor Quality",
+      "count": 177,
+      "split": "train2022",
+      "task": "T2-2"
+    },
+    {
+      "class": "Normal",
+      "count": 482,
+      "split": "test2022",
+      "task": "T2-2"
+    },
+    {
+      "class": "CAS",
+      "count": 107,
+      "split": "test2022",
+      "task": "T2-2"
+    },
+    {
+      "class": "DAS",
+      "count": 99,
+      "split": "test2022",
+      "task": "T2-2"
+    },
+    {
+      "class": "CAS & DAS",
+      "count": 36,
+      "split": "test2022",
+      "task": "T2-2"
+    },
+    {
+      "class": "Poor Quality",
+      "count": 10,
+      "split": "test2022",
+      "task": "T2-2"
+    },
+    {
+      "class": "Normal",
+      "count": 539,
+      "split": "test2023",
+      "task": "T2-2"
+    },
+    {
+      "class": "CAS",
+      "count": 135,
+      "split": "test2023",
+      "task": "T2-2"
+    },
+    {
+      "class": "DAS",
+      "count": 133,
+      "split": "test2023",
+      "task": "T2-2"
+    },
+    {
+      "class": "CAS & DAS",
+      "count": 21,
+      "split": "test2023",
+      "task": "T2-2"
+    },
+    {
+      "class": "Poor Quality",
+      "count": 43,
+      "split": "test2023",
+      "task": "T2-2"
+    }
+  ]
+}

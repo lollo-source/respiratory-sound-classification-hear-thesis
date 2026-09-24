@@ -1,0 +1,89 @@
+{
+  "label": "tab:overall_harmonised_comparison",
+  "rows": [
+    {
+      "dataset": "BioCAS2022",
+      "delta_accuracy": 0.1049723756906078,
+      "delta_balanced_accuracy": 0.11690271252700524,
+      "delta_macro_f1": 0.11670946596579013,
+      "dual_accuracy": 0.7734806629834254,
+      "dual_balanced_accuracy": 0.747573814341072,
+      "dual_macro_f1": 0.7465505464480875,
+      "evaluation": "test2022",
+      "single_accuracy": 0.6685082872928176,
+      "single_balanced_accuracy": 0.6306711018140667,
+      "single_macro_f1": 0.6298410804822974,
+      "task": "binary"
+    },
+    {
+      "dataset": "BioCAS2022",
+      "delta_accuracy": 0.15607734806629836,
+      "delta_balanced_accuracy": 0.1813004399288185,
+      "delta_macro_f1": 0.19545298337602546,
+      "dual_accuracy": 0.7085635359116023,
+      "dual_balanced_accuracy": 0.5024277658502267,
+      "dual_macro_f1": 0.5081634627881321,
+      "evaluation": "test2022",
+      "single_accuracy": 0.5524861878453039,
+      "single_balanced_accuracy": 0.32112732592140825,
+      "single_macro_f1": 0.3127104794121066,
+      "task": "coarse"
+    },
+    {
+      "dataset": "BioCAS2023",
+      "delta_accuracy": 0.0905797101449275,
+      "delta_balanced_accuracy": 0.12895532544568633,
+      "delta_macro_f1": 0.1310647223386976,
+      "dual_accuracy": 0.8019323671497585,
+      "dual_balanced_accuracy": 0.7668179571293758,
+      "dual_macro_f1": 0.7746714456391877,
+      "evaluation": "test2023",
+      "single_accuracy": 0.711352657004831,
+      "single_balanced_accuracy": 0.6378626316836895,
+      "single_macro_f1": 0.6436067233004901,
+      "task": "binary"
+    },
+    {
+      "dataset": "BioCAS2023",
+      "delta_accuracy": 0.07004830917874405,
+      "delta_balanced_accuracy": 0.08283551591822264,
+      "delta_macro_f1": 0.11395680354701782,
+      "dual_accuracy": 0.6871980676328503,
+      "dual_balanced_accuracy": 0.4759798124459778,
+      "dual_macro_f1": 0.45781430999917694,
+      "evaluation": "test2023",
+      "single_accuracy": 0.6171497584541062,
+      "single_balanced_accuracy": 0.3931442965277552,
+      "single_macro_f1": 0.3438575064521591,
+      "task": "coarse"
+    },
+    {
+      "dataset": "HF_Lung",
+      "delta_accuracy": 0.019938650306748462,
+      "delta_balanced_accuracy": 0.01879465672569114,
+      "delta_macro_f1": 0.020367509820548024,
+      "dual_accuracy": 0.6441717791411042,
+      "dual_balanced_accuracy": 0.6441174717036786,
+      "dual_macro_f1": 0.6440765173159538,
+      "evaluation": "official_test",
+      "single_accuracy": 0.6242331288343558,
+      "single_balanced_accuracy": 0.6253228149779875,
+      "single_macro_f1": 0.6237090074954058,
+      "task": "binary"
+    },
+    {
+      "dataset": "HF_Lung",
+      "delta_accuracy": 0.05674846625766866,
+      "delta_balanced_accuracy": 0.05393636420801107,
+      "delta_macro_f1": 0.04945006371386934,
+      "dual_accuracy": 0.5204498977505112,
+      "dual_balanced_accuracy": 0.3965600787544761,
+      "dual_macro_f1": 0.37740343916600205,
+      "evaluation": "official_test",
+      "single_accuracy": 0.46370143149284254,
+      "single_balanced_accuracy": 0.342623714546465,
+      "single_macro_f1": 0.3279533754521327,
+      "task": "coarse"
+    }
+  ]
+}

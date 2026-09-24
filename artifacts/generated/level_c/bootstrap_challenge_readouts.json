@@ -1,0 +1,113 @@
+{
+  "label": "tab:bootstrap_challenge_readouts",
+  "rows": [
+    {
+      "ci_lower": 0.6098958907633258,
+      "ci_upper": 0.7124461273619035,
+      "method": "CLS",
+      "metric": "Score",
+      "point_estimate": 0.666829492279833,
+      "replicates": 10000,
+      "task": "T2-1"
+    },
+    {
+      "ci_lower": 0.6614787636557846,
+      "ci_upper": 0.7585673994853053,
+      "method": "Temporal Grid",
+      "metric": "Score",
+      "point_estimate": 0.7144049496631308,
+      "replicates": 10000,
+      "task": "T2-1"
+    },
+    {
+      "ci_lower": 0.6687772786513576,
+      "ci_upper": 0.7662263024978729,
+      "method": "Fusion",
+      "metric": "Score",
+      "point_estimate": 0.7214981710456408,
+      "replicates": 10000,
+      "task": "T2-1"
+    },
+    {
+      "ci_lower": 0.010429884457809674,
+      "ci_upper": 0.08694895896667341,
+      "method": "Temporal Grid - CLS",
+      "metric": "Score",
+      "point_estimate": 0.047575457383297826,
+      "replicates": 10000,
+      "task": "T2-1"
+    },
+    {
+      "ci_lower": 0.027493235800818628,
+      "ci_upper": 0.08524390722281246,
+      "method": "Fusion - CLS",
+      "metric": "Score",
+      "point_estimate": 0.05466867876580783,
+      "replicates": 10000,
+      "task": "T2-1"
+    },
+    {
+      "ci_lower": -0.018194973169237634,
+      "ci_upper": 0.031791223385574836,
+      "method": "Fusion - Temporal Grid",
+      "metric": "Score",
+      "point_estimate": 0.0070932213825100066,
+      "replicates": 10000,
+      "task": "T2-1"
+    },
+    {
+      "ci_lower": 0.42435435703119073,
+      "ci_upper": 0.5228804289040189,
+      "method": "CLS",
+      "metric": "Score",
+      "point_estimate": 0.4769299708715977,
+      "replicates": 10000,
+      "task": "T2-2"
+    },
+    {
+      "ci_lower": 0.4747695074845316,
+      "ci_upper": 0.569113999889817,
+      "method": "Temporal Grid",
+      "metric": "Score",
+      "point_estimate": 0.5239650848216146,
+      "replicates": 10000,
+      "task": "T2-2"
+    },
+    {
+      "ci_lower": 0.44926565466087026,
+      "ci_upper": 0.5599869260446363,
+      "method": "Fusion",
+      "metric": "Score",
+      "point_estimate": 0.5072296108171328,
+      "replicates": 10000,
+      "task": "T2-2"
+    },
+    {
+      "ci_lower": -0.01058595557652808,
+      "ci_upper": 0.10443367233807267,
+      "method": "Temporal Grid - CLS",
+      "metric": "Score",
+      "point_estimate": 0.047035113950016916,
+      "replicates": 10000,
+      "task": "T2-2"
+    },
+    {
+      "ci_lower": -0.024361967934627683,
+      "ci_upper": 0.07971012825780181,
+      "method": "Fusion - CLS",
+      "metric": "Score",
+      "point_estimate": 0.030299639945535084,
+      "replicates": 10000,
+      "task": "T2-2"
+    },
+    {
+      "ci_lower": -0.05339320049639317,
+      "ci_upper": 0.01758095961018846,
+      "method": "Fusion - Temporal Grid",
+      "metric": "Score",
+      "point_estimate": -0.016735474004481832,
+      "replicates": 10000,
+      "task": "T2-2"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "label": "tab:dual_readout_results",
+  "rows": [
+    {
+      "accuracy": 0.7734806629834254,
+      "balanced_accuracy": 0.747573814341072,
+      "dataset": "BioCAS2022",
+      "delta_accuracy": 0.027624309392265234,
+      "delta_balanced_accuracy": 0.025890744487500505,
+      "delta_macro_f1": 0.028131607534538583,
+      "evaluation": "test2022",
+      "macro_f1": 0.7465505464480875,
+      "record_count": 724,
+      "task": "binary"
+    },
+    {
+      "accuracy": 0.7085635359116023,
+      "balanced_accuracy": 0.5024277658502267,
+      "dataset": "BioCAS2022",
+      "delta_accuracy": 0.03867403314917128,
+      "delta_balanced_accuracy": 0.017185931326292703,
+      "delta_macro_f1": 0.033502863469326016,
+      "evaluation": "test2022",
+      "macro_f1": 0.5081634627881321,
+      "record_count": 724,
+      "task": "coarse"
+    },
+    {
+      "accuracy": 0.8019323671497585,
+      "balanced_accuracy": 0.7668179571293758,
+      "dataset": "BioCAS2023",
+      "delta_accuracy": -0.006038647342995196,
+      "delta_balanced_accuracy": 0.0025839212690423885,
+      "delta_macro_f1": -0.001758725724949728,
+      "evaluation": "test2023",
+      "macro_f1": 0.7746714456391877,
+      "record_count": 828,
+      "task": "binary"
+    },
+    {
+      "accuracy": 0.6871980676328503,
+      "balanced_accuracy": 0.4759798124459778,
+      "dataset": "BioCAS2023",
+      "delta_accuracy": 0.0,
+      "delta_balanced_accuracy": -0.0016968828998904506,
+      "delta_macro_f1": 0.0058511571593557465,
+      "evaluation": "test2023",
+      "macro_f1": 0.45781430999917694,
+      "record_count": 828,
+      "task": "coarse"
+    },
+    {
+      "accuracy": 0.6441717791411042,
+      "balanced_accuracy": 0.6441174717036786,
+      "dataset": "HF_Lung",
+      "delta_accuracy": 0.0010224948875254825,
+      "delta_balanced_accuracy": 0.0006934834521041822,
+      "delta_macro_f1": 0.0009276061486879206,
+      "evaluation": "official_test",
+      "macro_f1": 0.6440765173159538,
+      "record_count": 1956,
+      "task": "binary"
+    },
+    {
+      "accuracy": 0.5204498977505112,
+      "balanced_accuracy": 0.3965600787544761,
+      "dataset": "HF_Lung",
+      "delta_accuracy": 0.0015337423312883347,
+      "delta_balanced_accuracy": 0.012665201279377925,
+      "delta_macro_f1": 0.014332501236097972,
+      "evaluation": "official_test",
+      "macro_f1": 0.37740343916600205,
+      "record_count": 1956,
+      "task": "coarse"
+    }
+  ]
+}

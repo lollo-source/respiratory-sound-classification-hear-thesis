@@ -1,0 +1,23 @@
+{
+  "labels": [
+    "tab:hflung_class_distribution",
+    "tab:hflung_device_distribution",
+    "tab:biocas_harmonised_class_distribution",
+    "tab:biocas_challenge_class_distribution",
+    "tab:single_window_results",
+    "tab:single_window_per_class_recall",
+    "tab:single_window_event_capture",
+    "tab:complete_record_results",
+    "tab:complete_record_per_class_recall",
+    "tab:dual_readout_results",
+    "tab:dual_readout_per_class_recall",
+    "tab:overall_harmonised_comparison",
+    "tab:hear_opera_comparison",
+    "tab:biocas_challenge_placements",
+    "tab:challenge_readout_comparison",
+    "tab:bootstrap_harmonised",
+    "tab:bootstrap_challenge_readouts"
+  ],
+  "level": "C",
+  "table_count": 17
+}
