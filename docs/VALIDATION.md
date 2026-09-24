@@ -5,9 +5,18 @@ The public implementations for Quick Verification and all Full Reproduction scie
 - Quick Verification: 17/17 thesis tables reproduced and 17/17 verification PASS.
 - Unit/regression discovery: 79 tests. In the latest targeted run, 77/77 non-Quick tests passed; two tests that directly invoke Quick Verification were not rerun because that workflow was explicitly excluded from the task.
 - Protected release baseline: 77/77 files PASS size and SHA-256 verification.
-- Recovered Full run after process isolation: 14/17 applicable thesis tables reproduced and 14/14 verification PASS.
+- Recovered/resumed Full run used during intermediate validation: 14/17 applicable thesis tables reproduced and 14/14 verification PASS.
+- Final second fully fresh end-to-end Full Reproduction after the top-level workflow process-isolation fix: 14/17 applicable thesis tables reproduced and 14/14 verification PASS.
 
-The recovered Full run used fresh Python subprocesses for HeAR Harmonised, HeAR Challenge and OPERA, preventing numerical runtime state from leaking between top-level workflows. `--resume` has also been exercised successfully with validated complete feature caches. A second fully fresh end-to-end Full run from a brand-new output directory is still pending; it is not claimed as complete here.
+The top-level workflow process-isolation fix uses fresh Python subprocesses for HeAR Harmonised, HeAR Challenge and OPERA, preventing numerical runtime state from leaking between workflows. `--resume` was exercised successfully with validated complete feature caches during intermediate validation. It was followed by a second fully fresh end-to-end Full Reproduction from a previously nonexistent output directory, with `--resume` omitted. That final run completed HeAR Harmonised, the official BioCAS Challenge workflow, OPERA CE/CT/GT, final result assembly and post-computation verification, and reported:
+
+```text
+Full Reproduction complete
+14/17 applicable thesis tables reproduced
+14/14 verification PASS
+```
+
+The generated Full report recorded 14 comparable tables, consistency at thesis display precision, and a maximum absolute numerical difference of `1.1102230246251565e-16`.
 
 ## Meaning of verification PASS
 
@@ -79,6 +88,6 @@ The pinned public dependency files and scientific source/model/checkpoint hashes
 
 Protected provenance files retain some legacy internal labels and relative development paths for hash/audit continuity. As explained in [RESULT_LINEAGE.md](RESULT_LINEAGE.md), these entries are historical metadata, not runtime paths or reviewer setup requirements.
 
-## Remaining release gate
+## Final clean-room Full validation
 
-No scientific workflow is missing. The remaining execution gate is the second fully fresh Full Reproduction from a previously nonexistent `--output-dir` with `--resume` omitted, followed by the final integrity/privacy checks. The successful recovered 14/14 Full result is recorded above, but this pending clean-room rerun is deliberately not described as completed.
+No scientific workflow or clean-room Full rerun remains pending. The second fully fresh Full Reproduction completed successfully from a previously nonexistent `--output-dir`, with `--resume` omitted, after the top-level workflow process-isolation fix. Final result assembly and post-computation verification completed with 14/17 applicable thesis tables reproduced and 14/14 verification PASS.
