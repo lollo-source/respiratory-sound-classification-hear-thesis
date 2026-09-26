@@ -1,6 +1,10 @@
 # Environment setup
 
-Run commands in this guide from the repository root. Python **3.10** is required; use a separate virtual environment so the pinned scientific packages do not interact with system packages or another project.
+Run commands in this guide from the repository root. Python **3.10 with
+`venv`/`ensurepip` support** is required for the default setup; a Python 3.10
+executable without that operating-system component cannot create the virtual
+environment. Use a separate environment so the pinned scientific packages do
+not interact with system packages or another project.
 
 ## System prerequisites
 
@@ -37,9 +41,33 @@ The minimum documented platform requirements are Python 3.10, a POSIX-like envir
 
 Approximately 32 GB system RAM is recommended for high-dimensional Temporal Grid fitting. A complete harmonised HeAR feature cache can require about 11 GB of storage, in addition to Challenge, OPERA and result artifacts.
 
+## Optional Conda fallback
+
+Conda is not required. Reviewers who already use Conda, or cannot install their
+operating system's Python 3.10 `venv` package, may replace the corresponding
+environment-creation block above with one of these equivalents:
+
+```bash
+# Quick Verification
+conda create -n thesis-quick python=3.10 -y
+conda activate thesis-quick
+python -m pip install --upgrade pip
+python -m pip install -r requirements-quick-verification.txt
+
+# Full Reproduction (use a separate environment)
+conda create -n thesis-full python=3.10 -y
+conda activate thesis-full
+python -m pip install --upgrade pip
+python -m pip install -r requirements-full-reproduction.txt
+```
+
+After activation, run the same verification commands shown in the Quick or
+Full section. The pinned `requirements-*.txt` files remain authoritative; Conda
+only supplies Python and environment isolation.
+
 ## OPERA patch ordering
 
-Install `requirements-full-reproduction.txt` first so that the target `timm` package exists. Then clone and check out OPERA, activate `.venv-full`, and run OPERA's `prepare_code.sh`. That script copies OPERA's patched Swin Transformer implementation into the active environment's `timm` installation; running it in a different environment patches the wrong installation.
+Install `requirements-full-reproduction.txt` first so that the target `timm` package exists. Then clone and check out OPERA, make sure the Full environment is active, and run OPERA's `prepare_code.sh`. That script copies OPERA's patched Swin Transformer implementation into the active environment's `timm` installation; running it in a different environment patches the wrong installation.
 
 After the model steps in [MODEL_SETUP.md](MODEL_SETUP.md), validate the required interface:
 

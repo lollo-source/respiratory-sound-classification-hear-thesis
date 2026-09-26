@@ -12,6 +12,7 @@ from sklearn.metrics import accuracy_score, balanced_accuracy_score, f1_score, r
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from threadpoolctl import threadpool_info, threadpool_limits
+from src.progress import downstream_progress
 
 from .features import write_csv_gz, write_json
 
@@ -144,11 +145,14 @@ def run_downstream(dataset, records, single_cls, cls_record, tg_record, output_d
     metrics = []
     alpha_rows = []
     selected = {}
+    dataset_label = "HF Lung" if dataset == "hf_lung" else "BioCAS harmonised"
 
     for task, spec in TASKS.items():
         classes = list(spec["classes"])
         labels = records[spec["column"]].astype(str).to_numpy()
+        downstream_progress("%s — %s task: CLS grouped cross-validation" % (dataset_label, task))
         oof_indices_cls, oof_truth, oof_cls = _oof_probabilities(cls_record, records, task)
+        downstream_progress("%s — %s task: Temporal Grid grouped cross-validation" % (dataset_label, task))
         oof_indices_tg, oof_truth_tg, oof_tg = _oof_probabilities(tg_record, records, task)
         if not np.array_equal(oof_indices_cls, oof_indices_tg) or not np.array_equal(oof_truth, oof_truth_tg):
             raise RuntimeError("branch OOF alignment mismatch")
@@ -166,6 +170,7 @@ def run_downstream(dataset, records, single_cls, cls_record, tg_record, output_d
         alpha_rows.append(ranking)
 
         for dataset_name, evaluation, eval_indices in _evaluation_splits(dataset, records):
+            downstream_progress("%s — %s task: %s final evaluation" % (dataset_label, task, dataset_name))
             phase1_probability = _fit_probabilities(
                 single_cls[train_indices], labels[train_indices], single_cls[eval_indices], classes
             )

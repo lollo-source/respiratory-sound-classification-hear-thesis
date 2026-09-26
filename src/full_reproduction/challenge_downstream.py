@@ -11,6 +11,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from threadpoolctl import threadpool_info
+from src.progress import downstream_progress
 
 from .challenge_data import TASKS
 from .features import write_csv_gz, write_json
@@ -127,6 +128,8 @@ def run_challenge_downstream(records_by_dataset, feature_paths_by_dataset, outpu
     output_dir = Path(output_dir); output_dir.mkdir(parents=True, exist_ok=True)
     aggregated, selections, fold_rows, summary_rows = {}, {}, [], []
     for dataset, records in records_by_dataset.items():
+        dataset_label = "BioCAS 2022" if dataset == "biocas2022" else "BioCAS 2023"
+        downstream_progress("%s: aggregating CLS and Temporal Grid readouts" % dataset_label)
         paths = feature_paths_by_dataset[dataset]
         metadata = pd.read_csv(paths["window_metadata"], dtype={"record_id": str})
         groups = grouped_window_indices(records, metadata)
@@ -139,9 +142,12 @@ def run_challenge_downstream(records_by_dataset, feature_paths_by_dataset, outpu
         }
     train_records = records_by_dataset["biocas2022"]
     for task in TASKS:
+        downstream_progress("BioCAS 2022 — %s task: selecting SDP temperature by grouped CV" % task)
         selected, rows, summary = select_temperature(train_records, aggregated["biocas2022"]["cls_selection"], task)
         selections[task] = selected; fold_rows.extend(rows); summary_rows.extend(summary)
     for dataset in records_by_dataset:
+        dataset_label = "BioCAS 2022" if dataset == "biocas2022" else "BioCAS 2023"
+        downstream_progress("%s: preparing selected CLS aggregation" % dataset_label)
         for temperature in set(selections.values()):
             aggregated[dataset]["cls_final"][temperature] = aggregate_sdp_final(
                 aggregated[dataset]["cls_windows"], aggregated[dataset]["groups"], temperature)
@@ -157,6 +163,7 @@ def run_challenge_downstream(records_by_dataset, feature_paths_by_dataset, outpu
                 evaluation = "BioCAS2022"
             else:
                 indices = np.arange(len(records), dtype=int); evaluation = "BioCAS2023"
+            downstream_progress("%s — %s task: final CLS/Temporal Grid/Fusion evaluation" % (evaluation, task))
             truth = records[column].astype(str).to_numpy()[indices]
             p_cls = _probabilities(aggregated["biocas2022"]["cls_final"][temperature][train], train_y[train],
                                    aggregated[dataset]["cls_final"][temperature][indices], classes)

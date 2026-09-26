@@ -35,10 +35,16 @@ class StageProgress(object):
         self.started = {}
         self.workflow_started = self.clock()
         progress_message(title, self.stream)
-        progress_message(
-            "Requested stages (%d): %s" % (len(self.stages), " -> ".join(label for _key, label in self.stages)),
-            self.stream,
-        )
+        prefix = "Requested stages (%d): " % len(self.stages)
+        line = prefix
+        for _key, label in self.stages:
+            separator = "" if line == prefix else " -> "
+            if line != prefix and len(line) + len(separator) + len(label) > 100:
+                progress_message(line, self.stream)
+                line = "   -> " + label
+            else:
+                line += separator + label
+        progress_message(line, self.stream)
 
     def _position(self, key):
         for index, (candidate, label) in enumerate(self.stages, start=1):
@@ -137,6 +143,10 @@ def cache_reused(label, stream=None):
     progress_message("OK %s — validated cache reused" % label, stream)
 
 
+def downstream_progress(message, stream=None):
+    progress_message("   Downstream: %s" % message, stream)
+
+
 def run_stage(progress, key, operation):
     """Run one existing operation while preserving its result and exceptions."""
     if progress is None:
@@ -145,7 +155,7 @@ def run_stage(progress, key, operation):
     if key == "downstream":
         progress_message(
             "   Fitting, cross-validation and evaluation are running; "
-            "this stage may take several minutes without intermediate output.",
+            "coarse progress appears at major operation boundaries.",
             progress.stream,
         )
     try:

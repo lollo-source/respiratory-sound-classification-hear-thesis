@@ -23,7 +23,10 @@ Quick Verification does **not** reproduce encoder inference from raw audio. Full
 
 ## Quick Verification
 
-From a clone of this repository:
+From a clone of this repository. The default setup requires Python 3.10 **with
+`venv`/`ensurepip` support**; having a `python3.10` executable alone is not
+sufficient. If the operating-system `venv` package is unavailable, use the
+optional Conda setup in [Environment setup](docs/ENVIRONMENT_SETUP.md).
 
 ```bash
 git clone https://github.com/lollo-source/respiratory-sound-classification-hear-thesis
@@ -47,7 +50,10 @@ The calculation runs in an isolated temporary copy. A successful run publishes t
 
 ## Full Reproduction
 
-Full Reproduction requires Python 3.10, a CUDA-capable GPU, both raw datasets, a HeAR implementation checkout and model snapshot, and an OPERA checkout and three checkpoints. Complete these guides in order:
+Full Reproduction requires Python 3.10 with `venv` support for the default
+setup (or the documented optional Conda fallback), a CUDA-capable GPU, both raw
+datasets, a HeAR implementation checkout and model snapshot, and an OPERA
+checkout and three checkpoints. Complete these guides in order:
 
 1. [Environment setup](docs/ENVIRONMENT_SETUP.md)
 2. [Dataset acquisition and layout](docs/DATASET_SETUP.md)

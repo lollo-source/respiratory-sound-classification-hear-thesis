@@ -26,10 +26,20 @@ The code validates the file hash rather than comparing the HeAR checkout's Git `
 
 ## HeAR model snapshot
 
-`--hear-model-path` is a local snapshot of [google/hear-pytorch](https://huggingface.co/google/hear-pytorch) at exact revision `f791cd42437c3e268c8ac84707e3508900f65f1a`. The repository is publicly listed but gated by immediate acceptance of the Health AI Developer Foundations terms. Sign in to Hugging Face, accept the model terms on its page, authenticate locally, and download the pinned snapshot:
+HeAR weights are intentionally not stored in this repository.
+`--hear-model-path` must instead point to a local snapshot of
+[google/hear-pytorch](https://huggingface.co/google/hear-pytorch) at exact
+revision `f791cd42437c3e268c8ac84707e3508900f65f1a`. Access is gated by the Health
+AI Developer Foundations terms. Using your own Hugging Face account, sign in
+and accept the upstream terms on the model page before continuing.
+
+With the Full environment active, authenticate through the Python API already
+provided by the pinned `huggingface-hub` package, then download the exact
+revision. These commands do not require the `hf` CLI or an additional `click`
+installation:
 
 ```bash
-hf auth login
+python -c "from huggingface_hub import interpreter_login; interpreter_login()"
 python -c "from huggingface_hub import snapshot_download; snapshot_download(repo_id='google/hear-pytorch', revision='f791cd42437c3e268c8ac84707e3508900f65f1a', local_dir='/path/to/hear-model')"
 ```
 
@@ -41,7 +51,8 @@ The two required files must be directly below the path passed to `--hear-model-p
 └── pytorch_model.bin
 ```
 
-Runtime integrity checks require:
+The repository's runtime SHA-256 checks then verify that the downloaded
+snapshot contains the certified files:
 
 ```text
 9774a77892e39ca8798aacfe68287a7cbd280993175ea93ca8424ffc75130e60  config.json

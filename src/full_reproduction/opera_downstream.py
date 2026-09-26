@@ -9,6 +9,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, balanced_accuracy_score, f1_score
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
+from src.progress import downstream_progress
 
 from .features import write_csv_gz, write_json
 from .opera import MODEL_SPECS
@@ -39,6 +40,7 @@ def run_downstream(records, feature_paths, output_dir, hear_metrics_path=None):
         if values.shape != (len(records), MODEL_SPECS[model_name]["dimension"]): raise RuntimeError("feature row/shape mismatch")
         for task, task_spec in TASKS.items():
             labels = records[task_spec["column"]].astype(str).to_numpy(); classes = task_spec["classes"]
+            downstream_progress("%s — %s task: fitting and evaluating BioCAS 2022/2023" % (method, task))
             classifier = make_classifier().fit(values[train], labels[train])
             fitted = list(classifier.named_steps["classifier"].classes_)
             for dataset, evaluation, indices in evaluations:

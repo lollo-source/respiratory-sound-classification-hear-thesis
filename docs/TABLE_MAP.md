@@ -1,5 +1,12 @@
 # Thesis table map
 
+The 17 tables listed below constitute the complete set of quantitative thesis
+tables covered by this reproducibility release. Quick Verification reproduces
+and verifies all 17; Full Reproduction independently reconstructs the 14 tables
+for which the complete raw-data-to-result workflow is scientifically
+applicable, while the remaining three are explicitly Quick-only for the
+documented event-annotation and frozen-bootstrap-provenance reasons.
+
 Quick Verification calculates all thesis-formatted tables in an isolated temporary workspace, requires all 17 newly generated tables, then publishes them to `results/quick/{tables,machine_readable}/` and renders `results/quick/RESULTS.md`. Frozen references under `reference_results/` are read only by the post-computation verifier.
 
 Full runtime paths below are relative to `<FULL_OUTPUT_DIR>`. Harmonised HeAR writes below `datasets/<dataset>/`, Challenge below `challenge/`, and OPERA below `opera/`. The complete `--workflow all --stage all` run publishes the 14 scientifically applicable tables to repository-root `results/full/`, not below `<FULL_OUTPUT_DIR>`. The remaining three tables depend on packaged event annotations or frozen bootstrap draws and are explicitly Quick-only.
