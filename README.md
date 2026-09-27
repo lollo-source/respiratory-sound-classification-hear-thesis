@@ -1,6 +1,6 @@
 # Respiratory Sound Classification with HeAR
 
-This is the public reproducibility repository for Lorenzo Bianco's MSc thesis, *Respiratory Sound Classification with HeAR: Full Recording Feature Aggregation and Prediction Fusion from Multiple Encoder Readouts*. It evaluates respiratory-sound classification with HeAR and pretrained audio representations.
+This is the public reproducibility repository for Lorenzo Bianco's MSc thesis, *Extending the Use of HeAR for Respiratory Sound Classification: Full Recording Analysis and Combined Use of Multiple Encoder Representations*. It evaluates respiratory-sound classification with HeAR and pretrained audio representations.
 
 ## Method overview
 
