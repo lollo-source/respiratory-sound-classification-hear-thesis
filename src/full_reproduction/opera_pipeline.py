@@ -157,5 +157,5 @@ def run(args, release_root):
     final = {"status": "complete", "scope": "OPERA CE/CT/GT BioCAS harmonised thesis comparison",
              "stage": args.stage, "models": list(MODEL_SPECS), "result": result,
              "environment": environment_payload(),
-             "out_of_scope_for_this_workflow": ["repository-wide clean-room certification"]}
+             "out_of_scope_for_this_workflow": ["repository-wide end-to-end validation"]}
     write_json(root / "run_manifest.json", final); return final

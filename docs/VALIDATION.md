@@ -2,46 +2,45 @@
 
 The public implementations for Quick Verification and all Full Reproduction scientific scopes have been exercised successfully. Current release evidence is:
 
-- Quick Verification: 17/17 thesis tables reproduced and 17/17 verification PASS.
-- Unit/regression discovery: 79 tests. In the latest targeted run, 77/77 non-Quick tests passed; two tests that directly invoke Quick Verification were not rerun because that workflow was explicitly excluded from the task.
-- Protected release baseline: 77/77 files PASS size and SHA-256 verification.
-- Recovered/resumed Full run used during intermediate validation: 14/17 applicable thesis tables reproduced and 14/14 verification PASS.
-- Final second fully fresh end-to-end Full Reproduction after the top-level workflow process-isolation fix: 14/17 applicable thesis tables reproduced and 14/14 verification PASS.
+- Quick Verification reproduced all 17 mapped quantitative thesis tables and passed all 17 verification checks.
+- The complete unit/regression suite passed 81 tests.
+- The protected release baseline passed size and SHA-256 checks for all 77 files in its manifest.
+- A fully fresh Full Reproduction completed from a new output directory without resume and reproduced the 14 applicable tables, with 14/14 verification checks passing.
 
-The top-level workflow process-isolation fix uses fresh Python subprocesses for HeAR Harmonised, HeAR Challenge and OPERA, preventing numerical runtime state from leaking between workflows. `--resume` was exercised successfully with validated complete feature caches during intermediate validation. It was followed by a second fully fresh end-to-end Full Reproduction from a previously nonexistent output directory, with `--resume` omitted. That final run completed HeAR Harmonised, the official BioCAS Challenge workflow, OPERA CE/CT/GT, final result assembly and post-computation verification, and reported:
+For the complete Full run, the top-level workflow starts HeAR Harmonised, HeAR Challenge, and OPERA in fresh Python subprocesses. The harmonised workflow uses the documented one-thread BLAS setting, while the Challenge workflow retains its documented thread environment.
 
-```text
-Full Reproduction complete
-14/17 applicable thesis tables reproduced
-14/14 verification PASS
-```
+The fully fresh Full Reproduction reported:
+
+    Full Reproduction complete
+    14/17 applicable thesis tables reproduced
+    14/14 verification PASS
 
 The generated Full report recorded 14 comparable tables, consistency at thesis display precision, and a maximum absolute numerical difference of `1.1102230246251565e-16`.
 
 ## Meaning of verification PASS
 
-Verification runs only after the producer has emitted the declared table set. Overall `PASS` requires an error-free integrity preflight and every applicable machine-readable table to match its frozen reference structurally, numerically and at thesis display precision. Non-numeric values, Boolean values, dictionary key sets, list lengths and list ordering must match exactly. Numeric values must differ by no more than the implemented absolute tolerance of `1e-12` and must format identically at the table's declared display precision: four decimal places for most tables and one decimal place for the HF Lung device-distribution and Quick-only event-capture tables.
+Verification runs only after the producer has emitted the declared table set. Overall `PASS` requires an error-free integrity preflight and every applicable machine-readable table to match its frozen reference structurally, numerically, and at thesis display precision. Non-numeric values, Boolean values, dictionary key sets, list lengths, and list ordering must match exactly. Numeric values must differ by no more than the implemented absolute tolerance of `1e-12` and must format identically at the table's declared display precision: four decimal places for most tables and one decimal place for the HF Lung device-distribution and Quick-only event-capture tables.
 
-The calculation producers do not read frozen thesis values. Only the separate post-computation verifier reads `reference_results/`, after fresh tables exist, and records the reference hashes and per-table comparison status in `verification.json`.
+The calculation producers do not read frozen thesis values. Only the separate post-computation verifier reads `reference_results/` after fresh tables exist, and it records the reference hashes and per-table comparison status in `verification.json`.
 
 The “Quick versus Full” line in a Full `RESULTS.md` is a separate comparison between the 14 freshly assembled Full table objects and the corresponding current `results/quick/machine_readable/*.json` files. It is not the frozen-reference verification result.
 
 ## Protected release baseline and Quick Verification
 
-The protected release manifest covers 77 files; all 77 passed their recorded size and SHA-256 checks. Protected scientific artifacts, references, protocol constants and thesis identity metadata are unchanged by this documentation update.
+The protected release manifest covers 77 files; all 77 passed their recorded size and SHA-256 checks. Protected scientific artifacts, references, protocol constants, and thesis identity metadata are unchanged by this documentation update.
 
-Quick Verification reproduced all 17 thesis tables and passed all 17 post-computation table checks. It calculates in an isolated temporary workspace and publishes only after all newly generated tables are present and verification passes.
+Quick Verification reproduced all 17 mapped quantitative thesis tables and passed all 17 post-computation table checks. It calculates in an isolated temporary workspace and publishes only after all newly generated tables are present and verification passes.
 
 ## Harmonised HeAR evidence
 
 - Public preflight reconstructed 9,765 HF Lung records and 3,323 included BioCAS records solely from the public manifests and explicit dataset roots.
 - Two fresh model loads over the first 32 batches/1,024 windows of each dataset produced bit-identical CLS and Temporal Grid arrays.
-- Full extraction produced 78,120 HF windows and 19,895 BioCAS windows. Complete fresh arrays and record aggregates were bit-identical to the independent audit evidence.
-- Fresh downstream fitting produced 21,048 prediction rows. Ground truth, class order, selected alpha, predicted class, and all metric cells matched the certified evidence.
-- The maximum probability difference was zero except for an already audited BioCAS fusion last-bit difference of `2.220446049250313e-16`; no class, decision, displayed value, or metric changed.
-- A diagnostic multithreaded HF replay initially exposed 14 solver-level differences. Reapplying the canonical one-thread downstream contract removed all differences without altering data or expected values.
+- Full extraction produced 78,120 HF windows and 19,895 BioCAS windows. Complete fresh arrays and record aggregates were bit-identical to the separate validation evidence.
+- Fresh downstream fitting produced 21,048 prediction rows. Ground truth, class order, selected alpha, predicted class, and all metric cells matched the validation evidence.
+- The maximum probability difference was zero except for a BioCAS fusion last-bit difference of `2.220446049250313e-16`; no class, decision, displayed value, or metric changed.
+- The harmonised downstream workflow uses the documented one-thread BLAS setting to preserve deterministic numerical behaviour.
 
-The internal validation feature arrays were approximately 9.84 GB and are deliberately not distributed or consumed by the public workflow.
+The non-distributed validation feature arrays were approximately 9.84 GB and are not consumed by the public workflow.
 
 | Dataset | CLS window SHA-256 | Temporal Grid window SHA-256 |
 |---|---|---|
@@ -80,14 +79,10 @@ The internal validation feature arrays were approximately 9.84 GB and are delibe
 
 ## Independence, integrity, and privacy
 
-The Full calculation modules do not read frozen thesis references, packaged Quick predictions, historical result directories, or internal validation features. Expected thesis metrics and selected values are not embedded as correction constants. References are accessed only by the separate post-computation verifier.
+The Full calculation modules do not read frozen thesis references, packaged Quick predictions, historical result directories, or non-distributed validation features. Expected thesis metrics and selected values are not embedded as correction constants. References are accessed only by the separate post-computation verifier.
 
 Generated metadata contains only release-local pseudonyms. Validation found no exported private path, credential, source identifier, reversible mapping, or unexpected symlink. Full runtime caches and result bundles are Git-ignored.
 
-The pinned public dependency files and scientific source/model/checkpoint hashes define the certified software inputs. GPU model, NVIDIA driver packaging and other hardware-dependent details can vary as long as the documented Python/CUDA checks and all runtime identity validations pass.
+The pinned public dependency files and scientific source, model, and checkpoint hashes define the reproducibility inputs. GPU model, NVIDIA driver packaging, and other hardware-dependent details can vary as long as the documented Python/CUDA checks and all runtime identity validations pass.
 
-Protected provenance files retain some legacy internal labels and relative development paths for hash/audit continuity. As explained in [RESULT_LINEAGE.md](RESULT_LINEAGE.md), these entries are historical metadata, not runtime paths or reviewer setup requirements.
-
-## Final clean-room Full validation
-
-No scientific workflow or clean-room Full rerun remains pending. The second fully fresh Full Reproduction completed successfully from a previously nonexistent `--output-dir`, with `--resume` omitted, after the top-level workflow process-isolation fix. Final result assembly and post-computation verification completed with 14/17 applicable thesis tables reproduced and 14/14 verification PASS.
+Some frozen provenance files retain legacy internal labels and relative development paths because they are part of immutable reference material. As explained in RESULT_LINEAGE.md, these entries are historical metadata, not runtime paths or public workflow names.

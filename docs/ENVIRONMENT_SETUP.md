@@ -26,7 +26,7 @@ python -c "import sys, numpy; assert sys.version_info[:2] == (3, 10); print(sys.
 
 ## Full Reproduction environment
 
-Full Reproduction uses the certified versions in `requirements-full-reproduction.txt`:
+Full Reproduction uses the pinned versions in `requirements-full-reproduction.txt`:
 
 ```bash
 python3.10 -m venv .venv-full
@@ -43,7 +43,7 @@ Approximately 32 GB system RAM is recommended for high-dimensional Temporal Grid
 
 ## Optional Conda fallback
 
-Conda is not required. Reviewers who already use Conda, or cannot install their
+Conda is not required. Users who already use Conda, or cannot install their
 operating system's Python 3.10 `venv` package, may replace the corresponding
 environment-creation block above with one of these equivalents:
 
@@ -77,6 +77,6 @@ python -c "import inspect; from timm.models.swin_transformer import SwinTransfor
 
 Full Reproduction repeats this interface validation before loading OPERA-GT. Source, model and checkpoint hashes are also checked at runtime; passing this environment check alone does not replace those integrity checks.
 
-## Certified versus portable details
+## Pinned versus machine-dependent details
 
-The exact package versions in `requirements-full-reproduction.txt`, pinned model/checkpoint hashes and workflow contracts define the certified software setup. Python 3.10 and CUDA-capable PyTorch execution are minimum requirements. GPU model, driver packaging, available memory, filesystem location and wall-clock duration are machine-dependent; keep those local choices out of configuration committed for review.
+The exact package versions in `requirements-full-reproduction.txt`, model/checkpoint hashes and workflow contracts are pinned reproducibility inputs. Python 3.10 and CUDA-capable PyTorch execution are minimum requirements. GPU model, driver packaging, available memory, filesystem location and runtime duration are machine-dependent and may vary provided the documented runtime checks pass.

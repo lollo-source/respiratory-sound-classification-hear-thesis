@@ -52,7 +52,7 @@ The two required files must be directly below the path passed to `--hear-model-p
 ```
 
 The repository's runtime SHA-256 checks then verify that the downloaded
-snapshot contains the certified files:
+snapshot contains the expected hash-validated files:
 
 ```text
 9774a77892e39ca8798aacfe68287a7cbd280993175ea93ca8424ffc75130e60  config.json
@@ -84,7 +84,7 @@ bc637deacfde3154d2290eb063fb6b3a6c5dd33fc0c26e79a39a08dd0e5f185c  src/benchmark/
 96bd9692d85fe82a033dcc86e8d97fa4971ba9d04ea2437888f88d01e0e81af5  src/util.py
 ```
 
-With `.venv-full` active and the Full requirements already installed, apply the upstream patch and validate `timm`:
+With the Full environment active and the Full requirements already installed, apply the upstream patch and validate `timm`:
 
 ```bash
 cd /path/to/OPERA

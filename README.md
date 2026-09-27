@@ -12,12 +12,16 @@ This is the public reproducibility repository for Lorenzo Bianco's MSc thesis, *
 
 <p align="center"><em>Overview of the final processing pipeline. Blue blocks represent the canonical HeAR processing path, while green blocks highlight the extensions introduced in this thesis.</em></p>
 
-Two workflows serve different review needs:
+The repository provides two complementary workflows:
 
 | Workflow | Starts from | Use it for | Coverage |
 |---|---|---|---|
 | Quick Verification | Packaged pseudonymised predictions, probabilities, protocol manifests and frozen bootstrap draws | Fast CPU-only verification of the thesis statistics and tables | 17/17 tables |
 | Full Reproduction | Raw HF Lung and SPRSound/BioCAS audio plus pinned HeAR and OPERA resources | Re-running model inference, downstream fitting and applicable table generation | 14/17 tables |
+
+The 17 mapped tables are the quantitative thesis tables covered by this reproducibility release. They collect the dataset statistics and experimental results reported in the thesis, including Single Window and Complete Record results, Dual Readout performance, per-class analyses, the HeAR–OPERA comparison, official BioCAS Challenge results, event-capture analysis, and bootstrap evaluations. Quick Verification reproduces all 17 from the packaged reproducibility inputs, while Full Reproduction reconstructs 14 through the raw-audio workflows using the pinned model resources and documented public inputs; the remaining three depend on packaged event-annotation or bootstrap provenance. See the [thesis table map](docs/TABLE_MAP.md) for the one-to-one mapping between thesis labels and generated outputs.
+
+The supported public entry points are `scripts/quick_verify.py` and `scripts/full_reproduce.py`. The lower-level `scripts/reproduce_*.py` files are implementation components invoked by Quick Verification, not additional public workflows.
 
 Quick Verification does **not** reproduce encoder inference from raw audio. Full Reproduction intentionally omits three tables whose event-overlap annotations or frozen bootstrap-draw provenance are available only to Quick Verification.
 
@@ -46,7 +50,7 @@ Expected successful summary:
 results/quick/RESULTS.md
 ```
 
-The calculation runs in an isolated temporary copy. A successful run publishes the reviewer-facing bundle at `results/quick/`; a failed run preserves the preceding valid bundle.
+The calculation runs in an isolated temporary copy. A successful run publishes the result bundle at `results/quick/`; a failed run preserves the preceding valid bundle.
 
 ## Full Reproduction
 
@@ -76,7 +80,7 @@ python scripts/full_reproduce.py \
   --output-dir /path/to/full-output
 ```
 
-For the strongest clean-room test, use a previously nonexistent output directory outside the Git checkout and omit `--resume`.
+For a fully fresh reproduction, use a new output directory, preferably outside the Git checkout, and omit `--resume`. This prevents reuse of previously generated feature caches or intermediate artifacts.
 
 Expected successful summary:
 
@@ -87,7 +91,7 @@ Full Reproduction complete
 results/full/RESULTS.md
 ```
 
-The 14/17 count is intentional: the event-capture table and two patient-cluster bootstrap tables are Quick-only. Runtime and intermediate artifacts are written under `--output-dir`; the final reviewer-facing bundle is always published under the repository root at `results/full/`, not inside `--output-dir`.
+The 14/17 count is intentional: the event-capture table and two patient-cluster bootstrap tables are Quick-only. Runtime and intermediate artifacts are written under `--output-dir`; the final result bundle is always published under the repository root at `results/full/`, not inside `--output-dir`.
 
 ## Result bundles
 

@@ -12,7 +12,7 @@ Bootstrap uses BioCAS2022 patient clusters, 10,000 ordinary resamples with repla
 
 ## Harmonised exclusions
 
-The corrected harmonised exclusion accounting is 230 Poor-Quality-only records plus one exact train/evaluation duplicate, total 231. It is asserted in code and tests.
+The harmonised exclusion accounting is 230 Poor-Quality-only records plus one exact train/evaluation duplicate, total 231. It is asserted in code and tests.
 
 | Exclusion | Count | Reason |
 |---|---:|---|

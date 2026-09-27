@@ -12,7 +12,7 @@ Complete these guides before running Full:
 
 All six input roots in the complete command must already exist with the documented contents. Full Reproduction validates them; it does not download, discover or repair external inputs.
 
-## Complete clean-room run
+## Complete Full run
 
 From the repository root:
 
@@ -30,7 +30,7 @@ python scripts/full_reproduce.py \
   --output-dir /path/to/full-output
 ```
 
-`--output-dir` may be nonexistent; the program creates it. For the strongest clean-room reproduction, choose a brand-new output path, preferably outside the Git checkout, and omit `--resume`.
+For a fully fresh reproduction, use a new `--output-dir`, preferably outside the Git checkout, and omit `--resume`. This prevents reuse of previously generated feature caches or intermediate artifacts. The program creates the directory if it does not exist.
 
 ### Arguments
 
@@ -111,16 +111,15 @@ An individual stage can replace `--stage all`, but later stages require the vali
 - Downstream fitting/evaluation is recomputed whenever that stage is reached, even when valid feature caches are reused.
 - Stale unrelated files under `--output-dir` are not automatically cleaned.
 
-An interrupted extraction can leave an incomplete non-empty feature directory. `--resume` does not promise recovery of arbitrary partial arrays, so the incomplete cache will be rejected. The conservative response is to diagnose the interruption and begin again with a new output directory. A fully fresh reviewer test should always use a previously nonexistent `--output-dir` and omit `--resume`.
+An interrupted extraction can leave an incomplete non-empty feature directory. `--resume` does not promise recovery of arbitrary partial arrays, so the incomplete cache will be rejected. The conservative response is to diagnose the interruption and begin again with a new output directory. For a fully fresh run, use a new `--output-dir`, preferably outside the Git checkout, and omit `--resume`. This prevents reuse of previous feature caches or intermediate artifacts.
 
-Extraction loops report progress. Downstream fitting and cross-validation can take several minutes without intermediate updates; the command prints:
+Extraction loops report progress. Downstream fitting and cross-validation can also take several minutes. During these stages, the command reports coarse progress at major operation boundaries such as dataset, task, readout, or model evaluation. The initial message is:
 
 ```text
-Fitting, cross-validation and evaluation are running; this stage may take
-several minutes without intermediate output.
+Fitting, cross-validation and evaluation are running; coarse progress appears at major operation boundaries.
 ```
 
-Do not treat that expected quiet interval alone as a failure.
+The reporting is intentionally coarse rather than per iteration.
 
 ## Outputs
 
@@ -134,7 +133,7 @@ Runtime and intermediate artifacts live under `--output-dir`:
 └── run_manifest.json
 ```
 
-The final reviewer-facing result bundle is separate and is always published below the repository root:
+The final result bundle is separate and is always published below the repository root:
 
 ```text
 results/full/
