@@ -109,6 +109,8 @@ Calculation code does not use frozen thesis values as scientific inputs. Verific
 
 `PASS` requires every applicable generated table to satisfy the structural, numerical and thesis-display checks documented in [validation status](docs/VALIDATION.md), after the verifier's integrity preflight succeeds.
 
+**Frozen provenance note.** Some machine-readable provenance and verification records intentionally retain historical metadata, internal workflow labels, and development paths from the audited release snapshot. This includes [THESIS_IDENTITY.json](THESIS_IDENTITY.json), [FINAL_CHALLENGE_CONFIGURATION.json](FINAL_CHALLENGE_CONFIGURATION.json), [manifests/ARTIFACTS.json](manifests/ARTIFACTS.json), and material under [reference_results/](reference_results/) and [artifacts/generated/level_c/](artifacts/generated/level_c/). These records are preserved for reproducibility and integrity verification and should not be interpreted as current thesis-title, repository-status, filesystem-path, or public-workflow information. Current thesis information and the supported **Quick Verification** and **Full Reproduction** workflows are documented in this README. See [docs/RESULT_LINEAGE.md](docs/RESULT_LINEAGE.md) for details.
+
 ## Further documentation
 
 - Methods: [experimental protocol](docs/EXPERIMENTAL_PROTOCOL.md), [result lineage](docs/RESULT_LINEAGE.md), and [table map](docs/TABLE_MAP.md)
